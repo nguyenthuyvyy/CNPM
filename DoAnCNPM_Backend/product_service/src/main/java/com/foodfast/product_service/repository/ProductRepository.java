@@ -1,7 +1,7 @@
 package com.foodfast.product_service.repository;
-import org.springframework.data.mongodb.repository.MongoRepository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 import com.foodfast.product_service.model.Product;
 
-public interface ProductRepository extends MongoRepository<Product, String> {
-    
+public interface ProductRepository extends JpaRepository<Product, Long> {
 }

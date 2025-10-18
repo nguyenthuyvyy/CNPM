@@ -1,33 +1,37 @@
 package com.foodfast.payment_service.model;
 
 import lombok.*;
-
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.Instant;
-import java.util.Map;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@Document(collection = "payment")
+@Entity
+@Table(name = "payment")
 public class Payment {
+
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String orderId;
     private Integer status; // 0: pending, 1: paid
-    private BigDecimal amount; // số tiền
-    @CreatedDate
-    @Field("createdAt")
-    private Instant createdAt;
+    private BigDecimal amount;
 
-    @LastModifiedDate
-    @Field("updatedAt")
+    private Instant createdAt;
     private Instant updatedAt;
+
+    @PrePersist
+    protected void onCreate() {
+        createdAt = Instant.now();
+        updatedAt = Instant.now();
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        updatedAt = Instant.now();
+    }
 }

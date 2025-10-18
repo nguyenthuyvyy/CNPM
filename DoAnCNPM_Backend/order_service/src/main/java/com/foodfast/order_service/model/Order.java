@@ -1,13 +1,7 @@
 package com.foodfast.order_service.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedDate;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
+import lombok.*;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.List;
@@ -15,25 +9,39 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "order")
+@Builder
+@Entity
+@Table(name = "orders") // đặt tên table tránh trùng với keyword SQL
 public class Order {
 
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String userId;
     private String fullname;
     private String phone;
     private String address;
     private BigDecimal total;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "order_id")
     private List<OrderItem> items;
+
     private Integer paymethod; // 0: cod, 1: momo
     private Integer status; // 0: processing, 1: delivery, 2: done
-    @CreatedDate
-    @Field("createdAt")
-    private Instant createdAt;
 
-    @LastModifiedDate
-    @Field("updatedAt")
+    private Instant createdAt;
     private Instant updatedAt;
+
+    @PrePersist
+    protected void onCreate() {
+        createdAt = Instant.now();
+        updatedAt = Instant.now();
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        updatedAt = Instant.now();
+    }
 }

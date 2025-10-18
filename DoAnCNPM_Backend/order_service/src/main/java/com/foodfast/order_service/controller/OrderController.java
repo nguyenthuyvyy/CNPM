@@ -1,17 +1,19 @@
 package com.foodfast.order_service.controller;
+
 import com.foodfast.order_service.model.Order;
 import com.foodfast.order_service.service.OrderService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+
 @RestController
 @RequestMapping("/api/orders")
 public class OrderController {
 
     private final OrderService orderService;
 
-    public OrderController(OrderService orderService) {
-            this.orderService = orderService;  
+    public OrderController(OrderService orderService){
+        this.orderService = orderService;
     }
 
     @GetMapping
@@ -20,7 +22,7 @@ public class OrderController {
     }
 
     @GetMapping("/{id}")
-  public ResponseEntity<Order> getOrderById(@PathVariable String id) {
+    public ResponseEntity<Order> getOrderById(@PathVariable Long id) {
         return orderService.getOrderById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
@@ -32,7 +34,7 @@ public class OrderController {
     }
 
     @PutMapping("/{id}/status")
-    public ResponseEntity<Order> updateOrderStatus(@PathVariable String id, @RequestParam Integer status) {
+    public ResponseEntity<Order> updateOrderStatus(@PathVariable Long id, @RequestParam Integer status) {
         Order updated = orderService.updateOrderStatus(id, status);
         if (updated != null) {
             return ResponseEntity.ok(updated);
@@ -41,9 +43,8 @@ public class OrderController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteOrder(@PathVariable String id) {
+    public ResponseEntity<Void> deleteOrder(@PathVariable Long id) {
         orderService.deleteOrder(id);
         return ResponseEntity.noContent().build();
     }
-    
 }

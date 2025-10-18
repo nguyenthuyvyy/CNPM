@@ -1,18 +1,37 @@
 package com.foodfast.user_service.model;
+
+import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import java.time.Instant;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "user")
+@Builder
+@Entity
+@Table(name = "users") // tránh tên "user" trùng với từ khóa SQL
 public class User {
+
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     private String fullname;
     private String email;
     private String phone;
     private String password;
+
+    private Instant createdAt;
+    private Instant updatedAt;
+
+    @PrePersist
+    protected void onCreate() {
+        createdAt = Instant.now();
+        updatedAt = Instant.now();
+    }
+
+    @PreUpdate
+    protected void onUpdate() {
+        updatedAt = Instant.now();
+    }
 }
