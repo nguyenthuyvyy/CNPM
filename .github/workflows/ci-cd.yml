@@ -59,17 +59,7 @@ jobs:
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/payment-service
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/user-service
 
-      # --- 5. (Optional) Build Frontend Web ---
-      - name: Build Frontend Web
-        working-directory: ./DoAnCNPM_Frontend/web
-        run: |
-          npm install
-          npm run build
-
-      # --- 6. (Optional) Build Frontend Mobile ---
-      # Nếu bạn dùng React Native / Flutter, có thể thêm ở đây.
-
-      # --- 7. Deploy to Server ---
+      # --- 5. Deploy to Server ---
       - name: Deploy to Server
         if: success()
         run: |
