@@ -9,7 +9,7 @@ import java.time.Instant;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "users") // tránh tên "user" trùng với từ khóa SQL
+@Table(name = "users")
 public class User {
 
     @Id
@@ -17,9 +17,17 @@ public class User {
     private Long id;
 
     private String fullname;
+
+    @Column(unique = true, nullable = false)
     private String email;
+
     private String phone;
+
+    @Column(nullable = false)
     private String password;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     private Instant createdAt;
     private Instant updatedAt;

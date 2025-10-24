@@ -1,45 +1,46 @@
 package com.foodfast.user_service.controller;
 
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import com.foodfast.user_service.dto.UserDTO;
 import com.foodfast.user_service.model.User;
 import com.foodfast.user_service.service.UserService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/api/users")
+@RequiredArgsConstructor
 public class UserController {
 
     private final UserService userService;
 
-    public UserController(UserService userService) {
-        this.userService = userService;
-    }
-
     @GetMapping
-    public List<User> getAllUsers() {
-        return userService.getAllUsers();
+    public List<UserDTO> getAllUsers() {
+        return userService.getAllUsers().stream()
+                .map(u -> new UserDTO(u.getId(), u.getFullname(), u.getEmail(), u.getPhone(), u.getRole()))
+                .collect(Collectors.toList());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<User> getUserById(@PathVariable Long id) {
+    public ResponseEntity<UserDTO> getUserById(@PathVariable Long id) {
         return userService.getUserById(id)
-                .map(ResponseEntity::ok)
+                .map(u -> ResponseEntity.ok(new UserDTO(u.getId(), u.getFullname(), u.getEmail(), u.getPhone(), u.getRole())))
                 .orElse(ResponseEntity.notFound().build());
     }
 
     @PostMapping
-    public User createUser(@RequestBody User user) {
-        return userService.createUser(user);
+    public UserDTO createUser(@RequestBody User user) {
+        User saved = userService.createUser(user);
+        return new UserDTO(saved.getId(), saved.getFullname(), saved.getEmail(), saved.getPhone(), saved.getRole());
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User user) {
+    public ResponseEntity<UserDTO> updateUser(@PathVariable Long id, @RequestBody User user) {
         User updated = userService.updateUser(id, user);
-        if (updated != null) {
-            return ResponseEntity.ok(updated);
-        }
-        return ResponseEntity.notFound().build();
+        return ResponseEntity.ok(new UserDTO(updated.getId(), updated.getFullname(), updated.getEmail(), updated.getPhone(), updated.getRole()));
     }
 
     @DeleteMapping("/{id}")
