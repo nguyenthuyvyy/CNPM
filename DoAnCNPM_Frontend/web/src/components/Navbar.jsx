@@ -1,16 +1,24 @@
-export default function Navbar() {
-  return (
-    <nav className="flex items-center justify-between px-10 py-4 bg-white shadow-md">
-      {/* Logo bên trái */}
-      <h1 className="text-2xl font-bold italic text-orange-600">
-        HuongVyFood
-      </h1>
+import { useState } from "react";
+import LoginModal from "./LoginModal";
 
-      {/* Icon bên phải */}
-      <div className="flex items-center gap-6 text-2xl text-gray-800">
-        <i className="fa-solid fa-cart-shopping cursor-pointer hover:text-orange-500 transition"></i>
-        <i className="fa-solid fa-user cursor-pointer hover:text-orange-500 transition"></i>
-      </div>
-    </nav>
+export default function Navbar() {
+  const [showLogin, setShowLogin] = useState(false);
+
+  return (
+    <>
+      <nav className="flex justify-between items-center px-12 py-4 bg-pink-800 text-white shadow-md">
+        <h1 className="text-3xl font-bold italic">HuongVyFood</h1>
+
+        <div className="flex items-center gap-10 text-2xl">
+          <i
+            className="fa-solid fa-user hover:text-pink-400 cursor-pointer transition-all duration-200 hover:scale-110"
+            onClick={() => setShowLogin(true)}
+          ></i>
+          <i className="fa-solid fa-cart-shopping hover:text-pink-400 cursor-pointer transition-all duration-200 hover:scale-110"></i>
+        </div>
+      </nav>
+
+      {showLogin && <LoginModal onClose={() => setShowLogin(false)} />}
+    </>
   );
 }

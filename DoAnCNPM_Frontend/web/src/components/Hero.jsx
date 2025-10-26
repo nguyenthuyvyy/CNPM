@@ -1,23 +1,24 @@
-import hero from "../assets/hero.jpg";
+import hero from "../assets/hero.jpg"; // Đảm bảo ảnh này đúng đường dẫn
 
 export default function Hero() {
   return (
-    <div
-      className="relative h-[80vh] bg-cover bg-center"
+    <section
+      className="relative h-[80vh] flex items-center justify-center bg-cover bg-center"
       style={{ backgroundImage: `url(${hero})` }}
     >
-      {/* Lớp phủ mờ để chữ nổi hơn */}
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      {/* Lớp phủ tối */}
+      <div className="absolute inset-0 bg-black/50"></div>
 
-      {/* Text */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
-        <h1 className="text-5xl font-bold mb-4 drop-shadow-lg">
-          HuongVyFood
-        </h1>
-        <p className="text-lg drop-shadow-md">
-          Taste the Convenience: Food, Fast and Delivered.
-        </p>
+      {/* Nội dung chính */}
+      <div className="relative z-10 text-center text-white px-4">
+        <h1 className="text-6xl font-extrabold mb-4 tracking-wide text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+  HuongVyFood
+</h1>
+<p className="text-2xl font-light text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.7)]">
+  Taste the Convenience: Food, Fast and Delivered.
+</p>
+
       </div>
-    </div>
+    </section>
   );
 }
