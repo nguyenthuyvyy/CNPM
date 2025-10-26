@@ -1,14 +1,14 @@
-import React from "react";
+import { logout } from "../api/auth";
 
-function OwnerDashboard() {
+export default function OwnerDashboard() {
   const handleLogout = () => {
-    localStorage.removeItem("token");
+    logout();
     window.location.href = "/";
   };
 
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-bold mb-4">Owner Dashboard</h1>
+    <div className="p-6">
+      <h1 className="text-2xl font-bold mb-4">Owner Dashboard</h1>
       <button
         onClick={handleLogout}
         className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
@@ -18,5 +18,3 @@ function OwnerDashboard() {
     </div>
   );
 }
-
-export default OwnerDashboard;
