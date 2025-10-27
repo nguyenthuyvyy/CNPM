@@ -1,15 +1,13 @@
-version: "3.8"
-
 services:
   postgres-db:
-    image: postgres:15
+    image: postgres:18
     container_name: postgres-db
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 1
       POSTGRES_DB: foodfast_db
     ports:
-      - "5432:5432"
+      - "5433:5432"  # host port 5433 → container port 5432
     volumes:
       - pgdata:/var/lib/postgresql/data
     networks:
@@ -46,6 +44,9 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/foodfast_db
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=1
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_SHOW_SQL=true
+      - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.PostgreSQLDialect
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
     depends_on:
       - postgres-db
@@ -62,6 +63,8 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/foodfast_db
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=1
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.PostgreSQLDialect
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
     depends_on:
       - postgres-db
@@ -78,6 +81,8 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/foodfast_db
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=1
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.PostgreSQLDialect
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
     depends_on:
       - postgres-db
@@ -94,6 +99,8 @@ services:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/foodfast_db
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=1
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.PostgreSQLDialect
       - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
     depends_on:
       - postgres-db
