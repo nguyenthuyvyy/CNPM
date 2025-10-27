@@ -1,5 +1,5 @@
 FROM openjdk:21-jdk-slim
 WORKDIR /app
-COPY target/eureka_server-0.0.1-SNAPSHOT.jar app.jar
-EXPOSE 8761
+COPY target/api-gateway-1.0.0.jar app.jar
+EXPOSE 8085
 ENTRYPOINT ["java", "-jar", "app.jar"]
