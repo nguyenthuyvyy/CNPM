@@ -1,15 +1,22 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import TopMeals from "./components/TopMeals";
 import AdminDashboard from "./pages/AdminDashboard";
 import OwnerDashboard from "./pages/OwnerDashboard";
+import AddRestaurant from "./components/AddRestaurant";
 
 export default function App() {
   return (
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Hero />} />
+        <Route path="/" element={
+    <>
+      <Hero />
+      <TopMeals />
+    </>
+  } />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/owner" element={<OwnerDashboard />} />
       </Routes>

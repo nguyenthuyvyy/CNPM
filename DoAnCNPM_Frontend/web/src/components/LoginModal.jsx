@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { login } from "../api/auth";
 
-export default function LoginModal({ onClose }) {
+export default function LoginModal({ onClose, onRegister, onForgot }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -43,7 +43,9 @@ export default function LoginModal({ onClose }) {
         >
           ✕
         </button>
+
         <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <input
             type="email"
@@ -61,6 +63,7 @@ export default function LoginModal({ onClose }) {
             className="w-full px-3 py-2 rounded bg-gray-800 border border-gray-700 text-white"
             required
           />
+
           <button
             type="submit"
             className="w-full bg-pink-600 py-2 rounded hover:bg-pink-700 disabled:opacity-50"
@@ -69,12 +72,26 @@ export default function LoginModal({ onClose }) {
             {loading ? "Logging in..." : "LOGIN"}
           </button>
         </form>
+
         <div className="mt-4 text-center text-sm">
           <span>Don't have an account? </span>
-          <a href="/register" className="text-pink-500">REGISTER</a>
+          <button
+            type="button"
+            onClick={onRegister}
+            className="text-pink-500 underline"
+          >
+            REGISTER
+          </button>
         </div>
+
         <div className="mt-2 text-center text-sm">
-          <a href="/forgot-password" className="text-pink-500">FORGOT PASSWORD</a>
+          <button
+            type="button"
+            onClick={onForgot}
+            className="text-pink-500 underline"
+          >
+            FORGOT PASSWORD
+          </button>
         </div>
       </div>
     </div>
