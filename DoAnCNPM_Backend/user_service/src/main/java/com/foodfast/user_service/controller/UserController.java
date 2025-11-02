@@ -48,4 +48,12 @@ public class UserController {
         userService.deleteUser(id);
         return ResponseEntity.noContent().build();
     }
+
+    // 🆕 Endpoint cho Restaurant Service gọi để xác thực chủ nhà hàng
+    @GetMapping("/by-email")
+    public ResponseEntity<UserDTO> getUserByEmail(@RequestParam String email) {
+        return userService.getUserByEmail(email)
+                .map(u -> ResponseEntity.ok(new UserDTO(u.getId(), u.getFullname(), u.getEmail(), u.getPhone(), u.getRole())))
+                .orElse(ResponseEntity.notFound().build());
+    }
 }

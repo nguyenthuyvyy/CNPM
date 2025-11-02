@@ -24,6 +24,11 @@ public class UserService {
         return userRepository.findById(id);
     }
 
+    // 🆕 Thêm phương thức này để tìm user theo email
+    public Optional<User> getUserByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
+
     public User createUser(User user) {
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userRepository.save(user);

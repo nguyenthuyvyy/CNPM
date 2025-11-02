@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 import TopMeals from "./components/TopMeals";
 import AdminDashboard from "./pages/AdminDashboard";
 import OwnerDashboard from "./pages/OwnerDashboard";
-import AddRestaurant from "./components/AddRestaurant";
 
 export default function App() {
   return (

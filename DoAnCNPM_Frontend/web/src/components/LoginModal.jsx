@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { login } from "../api/auth";
+import { login, getRestaurantByOwnerEmail } from "../api/auth";
 
 export default function LoginModal({ onClose, onRegister, onForgot }) {
   const [email, setEmail] = useState("");
@@ -12,15 +12,19 @@ export default function LoginModal({ onClose, onRegister, onForgot }) {
     try {
       const data = await login(email, password);
 
-      localStorage.setItem("token", data.token);
-
       if (data.role === "CUSTOMER") {
         alert("Tài khoản khách hàng chỉ đăng nhập trên mobile app");
         localStorage.removeItem("token");
       } else if (data.role === "ADMIN") {
         window.location.href = "/admin";
       } else if (data.role === "RESTAURANT_OWNER") {
-        window.location.href = "/owner";
+        // 🆕 Gọi sang restaurant service để tìm nhà hàng của owner
+        const restaurantId = await getRestaurantByOwnerEmail(email);
+        if (restaurantId) {
+          window.location.href = `/owner/${restaurantId}`;
+        } else {
+          alert("Bạn chưa được gán vào nhà hàng nào!");
+        }
       } else {
         alert("Role không hợp lệ");
         localStorage.removeItem("token");

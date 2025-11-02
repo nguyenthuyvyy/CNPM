@@ -6,12 +6,12 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.4</version>
-		<relativePath/> 
+		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>order_service</artifactId>
+	<groupId>com.foodfast</groupId>
+	<artifactId>restaurant-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>order_service</name>
+	<name>restaurant-service</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
