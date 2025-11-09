@@ -13,19 +13,25 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
   const [token, setToken] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    AsyncStorage.getItem('token').then(t => {
-      if (t) setToken(t);
-    });
+    const loadToken = async () => {
+      const savedToken = await AsyncStorage.getItem('token');
+      if (savedToken) setToken(savedToken);
+      setLoading(false);
+    };
+    loadToken();
   }, []);
+
+  if (loading) return null; // hoặc màn hình splash
 
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         {!token ? (
           <>
-            <Stack.Screen name="Login" options={{ headerShown: false }}>
+            <Stack.Screen name="Login">
               {props => <LoginScreen {...props} setToken={setToken} />}
             </Stack.Screen>
             <Stack.Screen name="Register" component={RegisterScreen} />
@@ -33,13 +39,15 @@ export default function App() {
         ) : (
           <>
             <Stack.Screen name="Home">
-              {props => <HomeScreen {...props} token={token} />}
+              {props => <HomeScreen {...props} token={token} setToken={setToken} />}
             </Stack.Screen>
+
             <Stack.Screen name="Cart">
-              {props => <CartScreen {...props} token={token} />}
+              {props => <CartScreen {...props} token={token} setToken={setToken} />}
             </Stack.Screen>
+
             <Stack.Screen name="Orders">
-              {props => <OrderHistoryScreen {...props} token={token} />}
+              {props => <OrderHistoryScreen {...props} token={token} setToken={setToken} />}
             </Stack.Screen>
           </>
         )}
