@@ -2,6 +2,7 @@ package com.foodfast.drone_service.controller;
 
 import com.foodfast.drone_service.model.Drone;
 import com.foodfast.drone_service.service.DroneService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,46 +10,41 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/drones")
+@RequiredArgsConstructor
 public class DroneController {
 
     private final DroneService droneService;
 
-    public DroneController(DroneService droneService) {
-        this.droneService = droneService;
-    }
-
-    // GET /api/drones
     @GetMapping
     public List<Drone> getAllDrones() {
         return droneService.getAllDrones();
     }
 
-    // GET /api/drones/{id}
     @GetMapping("/{id}")
-    public ResponseEntity<Drone> getDrone(@PathVariable Long id) {
-        Drone drone = droneService.getDroneById(id);
-        if (drone == null) return ResponseEntity.notFound().build();
-        return ResponseEntity.ok(drone);
+    public ResponseEntity<Drone> getDroneById(@PathVariable Long id) {
+        return droneService.getDroneById(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 
-    // POST /api/drones
     @PostMapping
-    public Drone addDrone(@RequestBody Drone drone) {
-        droneService.addDrone(drone);
-        return drone;
+    public Drone createDrone(@RequestBody Drone drone) {
+        return droneService.createDrone(drone);
     }
 
-    // DELETE /api/drones/{id}
+    @PutMapping("/{id}")
+    public ResponseEntity<Drone> updateDrone(@PathVariable Long id, @RequestBody Drone drone) {
+        return ResponseEntity.ok(droneService.updateDrone(id, drone));
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteDrone(@PathVariable Long id) {
-        boolean removed = droneService.deleteDrone(id);
-        if (!removed) return ResponseEntity.notFound().build();
+        droneService.deleteDrone(id);
         return ResponseEntity.noContent().build();
     }
 
-    // Health check endpoint
-    @GetMapping("/health")
-    public String health() {
-        return "OK";
+    @GetMapping("/status/{status}")
+    public List<Drone> getDronesByStatus(@PathVariable String status) {
+        return droneService.getDronesByStatus(status);
     }
 }
