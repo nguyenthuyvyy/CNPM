@@ -41,6 +41,9 @@ jobs:
       - name: Build User Service
         working-directory: ./DoAnCNPM_Backend/user_service
         run: mvn clean install -DskipTests
+      - name: Build Drone Service
+        working-directory: ./DoAnCNPM_Backend/drone_service
+        run: mvn clean install -DskipTests
 
       # --- 4. Build & Push Docker Images ---
       - name: Build & Push Docker images
@@ -52,11 +55,13 @@ jobs:
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/order-service ./DoAnCNPM_Backend/order_service
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/payment-service ./DoAnCNPM_Backend/payment_service
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/user-service ./DoAnCNPM_Backend/user_service
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/drone-service ./DoAnCNPM_Backend/drone_service
 
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/eureka-server
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/product-service
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/order-service
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/payment-service
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/user-service
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/drone-service
 
   
