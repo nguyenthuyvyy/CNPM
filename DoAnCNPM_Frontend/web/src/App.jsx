@@ -18,6 +18,8 @@ export default function App() {
   } />
         <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/owner" element={<OwnerDashboard />} />
+        <Route path="/owner/:restaurantId" element={<OwnerDashboard />} />
+
       </Routes>
     </Router>
   );

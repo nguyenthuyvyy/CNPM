@@ -28,7 +28,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+      <!-- WebSocket (để dùng @EnableWebSocketMessageBroker, SimpMessagingTemplate, ... ) -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency>
 
+        <!-- Messaging (cho SimpMessagingTemplate và các API STOMP) -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-messaging</artifactId>
+        </dependency>
         <!-- JPA + PostgreSQL -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
