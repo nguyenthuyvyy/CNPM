@@ -1457,3 +1457,842 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 
 2025-11-12T15:38:39.831+07:00  INFO 29548 --- [drone-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-11-13T18:13:25.355+07:00  INFO 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Starting DroneServiceApplication using Java 21.0.7 with PID 14616 (C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service\target\classes started by THUY LINH in C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service)
+2025-11-13T18:13:25.358+07:00 DEBUG 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-13T18:13:25.359+07:00  INFO 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-11-13T18:13:25.435+07:00  INFO 14616 --- [drone-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-13T18:13:25.436+07:00  INFO 14616 --- [drone-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-13T18:13:26.763+07:00  INFO 14616 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-13T18:13:26.940+07:00  INFO 14616 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 171 ms. Found 1 JPA repository interface.
+2025-11-13T18:13:27.308+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=83c9befa-a92a-330e-843a-17d9541d1c0a
+2025-11-13T18:13:27.505+07:00  WARN 14616 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-13T18:13:27.509+07:00  WARN 14616 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-11-13T18:13:28.265+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-11-13T18:13:28.301+07:00  INFO 14616 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-13T18:13:28.303+07:00  INFO 14616 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-13T18:13:28.416+07:00  INFO 14616 --- [drone-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-13T18:13:28.416+07:00  INFO 14616 --- [drone-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2979 ms
+2025-11-13T18:13:28.839+07:00  INFO 14616 --- [drone-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-13T18:13:29.029+07:00  INFO 14616 --- [drone-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-13T18:13:29.120+07:00  INFO 14616 --- [drone-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-13T18:13:30.067+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-13T18:13:30.184+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-13T18:13:31.006+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@55f12775
+2025-11-13T18:13:31.018+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-13T18:13:31.176+07:00  WARN 14616 --- [drone-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-13T18:13:36.447+07:00  INFO 14616 --- [drone-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-13T18:13:36.952+07:00  INFO 14616 --- [drone-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:13:38.185+07:00  WARN 14616 --- [drone-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-13T18:13:39.299+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-13T18:13:40.377+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:13:41.493+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:13:41.560+07:00  INFO 14616 --- [drone-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-11-13T18:13:41.668+07:00  WARN 14616 --- [drone-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-13T18:13:41.727+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-11-13T18:13:41.798+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-11-13T18:13:41.808+07:00  INFO 14616 --- [drone-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T18:13:41.829+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-11-13T18:13:41.829+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-11-13T18:13:41.829+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-11-13T18:13:41.829+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-11-13T18:13:41.829+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-11-13T18:13:41.829+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-11-13T18:13:41.829+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-11-13T18:13:43.601+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-11-13T18:13:43.603+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-11-13T18:13:43.605+07:00  INFO 14616 --- [drone-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-13T18:13:43.611+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1763032423605 with initial instances count: 0
+2025-11-13T18:13:43.617+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DRONE-SERVICE with eureka with status UP
+2025-11-13T18:13:43.619+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763032423619, current=UP, previous=STARTING]
+2025-11-13T18:13:43.622+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:13:43.677+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-11-13T18:13:43.677+07:00  INFO 14616 --- [drone-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2025-11-13T18:13:44.009+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:13:44.702+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:13:44.725+07:00  INFO 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Started DroneServiceApplication in 21.135 seconds (process running for 21.642)
+2025-11-13T18:14:13.611+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-11-13T18:14:13.611+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-11-13T18:14:13.611+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-11-13T18:14:13.611+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-11-13T18:14:13.611+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-11-13T18:14:13.611+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2025-11-13T18:14:13.611+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-11-13T18:14:13.662+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-11-13T18:18:41.859+07:00  INFO 14616 --- [drone-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T18:23:41.889+07:00  INFO 14616 --- [drone-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T18:26:09.343+07:00  INFO 14616 --- [drone-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-13T18:26:09.386+07:00  INFO 14616 --- [drone-service] [Thread-6] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application DRONE-SERVICE with eureka with status DOWN
+2025-11-13T18:26:09.388+07:00  INFO 14616 --- [drone-service] [Thread-6] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033169388, current=DOWN, previous=UP]
+2025-11-13T18:26:09.390+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:26:09.495+07:00  INFO 14616 --- [drone-service] [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:26:09.526+07:00  INFO 14616 --- [drone-service] [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-13T18:26:09.548+07:00  INFO 14616 --- [drone-service] [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-13T18:26:09.557+07:00  INFO 14616 --- [drone-service] [Thread-6] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-11-13T18:26:09.624+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:26:09.628+07:00  INFO 14616 --- [drone-service] [Thread-6] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-11-13T18:26:09.750+07:00  INFO 14616 --- [drone-service] [Thread-6] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - deregister  status: 200
+2025-11-13T18:26:09.753+07:00  INFO 14616 --- [drone-service] [Thread-6] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-11-13T18:26:11.108+07:00  INFO 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Starting DroneServiceApplication using Java 21.0.7 with PID 14616 (C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service\target\classes started by THUY LINH in C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service)
+2025-11-13T18:26:11.110+07:00 DEBUG 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-13T18:26:11.111+07:00  INFO 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-11-13T18:26:11.771+07:00  INFO 14616 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-13T18:26:11.804+07:00  INFO 14616 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interface.
+2025-11-13T18:26:12.022+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=83c9befa-a92a-330e-843a-17d9541d1c0a
+2025-11-13T18:26:12.069+07:00  WARN 14616 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-13T18:26:12.070+07:00  WARN 14616 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-11-13T18:26:12.154+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-11-13T18:26:12.157+07:00  INFO 14616 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-13T18:26:12.158+07:00  INFO 14616 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-13T18:26:12.204+07:00  INFO 14616 --- [drone-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-13T18:26:12.204+07:00  INFO 14616 --- [drone-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1063 ms
+2025-11-13T18:26:12.275+07:00  INFO 14616 --- [drone-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-13T18:26:12.280+07:00  INFO 14616 --- [drone-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-13T18:26:12.299+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-13T18:26:12.301+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-11-13T18:26:12.421+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@21a3bb6d
+2025-11-13T18:26:12.421+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-11-13T18:26:12.469+07:00  WARN 14616 --- [drone-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-13T18:26:12.526+07:00  INFO 14616 --- [drone-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-13T18:26:12.610+07:00  INFO 14616 --- [drone-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:26:12.681+07:00  WARN 14616 --- [drone-service] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'droneController' defined in file [C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service\target\classes\com\foodfast\drone_service\controller\DroneController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'droneServiceImpl' defined in file [C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service\target\classes\com\foodfast\drone_service\service\DroneServiceImpl.class]: Failed to instantiate [com.foodfast.drone_service.service.DroneServiceImpl]: Constructor threw exception
+2025-11-13T18:26:12.682+07:00  INFO 14616 --- [drone-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:26:12.683+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-11-13T18:26:12.747+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-11-13T18:26:12.748+07:00  INFO 14616 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-11-13T18:26:12.755+07:00  INFO 14616 --- [drone-service] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-11-13T18:26:12.804+07:00 ERROR 14616 --- [drone-service] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'droneController' defined in file [C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service\target\classes\com\foodfast\drone_service\controller\DroneController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'droneServiceImpl' defined in file [C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service\target\classes\com\foodfast\drone_service\service\DroneServiceImpl.class]: Failed to instantiate [com.foodfast.drone_service.service.DroneServiceImpl]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625) ~[spring-context-6.1.13.jar:6.1.13]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363) ~[spring-boot-3.3.4.jar:3.3.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352) ~[spring-boot-3.3.4.jar:3.3.4]
+	at com.foodfast.drone_service.DroneServiceApplication.main(DroneServiceApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.3.4.jar:3.3.4]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'droneServiceImpl' defined in file [C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service\target\classes\com\foodfast\drone_service\service\DroneServiceImpl.class]: Failed to instantiate [com.foodfast.drone_service.service.DroneServiceImpl]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:306) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 22 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.foodfast.drone_service.service.DroneServiceImpl]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:221) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:117) ~[spring-beans-6.1.13.jar:6.1.13]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:315) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 36 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problems: 
+	Syntax error on token(s), misplaced construct(s)
+	Syntax error, insert "Identifier (" to complete ConstructorHeaderName
+	Syntax error, insert ")" to complete ConstructorDeclaration
+	Syntax error, insert ";" to complete ConstructorDeclaration
+	Syntax error, insert "Identifier (" to complete ConstructorHeaderName
+	Syntax error, insert ")" to complete ConstructorDeclaration
+	Syntax error, insert ";" to complete ConstructorDeclaration
+	The type DroneServiceImpl is already defined
+
+	at com.foodfast.drone_service.service.DroneServiceImpl.<init>(DroneServiceImpl.java:1) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:208) ~[spring-beans-6.1.13.jar:6.1.13]
+	... 38 common frames omitted
+
+2025-11-13T18:26:19.358+07:00  INFO 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Starting DroneServiceApplication using Java 21.0.7 with PID 14616 (C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service\target\classes started by THUY LINH in C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service)
+2025-11-13T18:26:19.359+07:00 DEBUG 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-13T18:26:19.359+07:00  INFO 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-11-13T18:26:19.575+07:00  INFO 14616 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-13T18:26:19.584+07:00  INFO 14616 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8 ms. Found 1 JPA repository interface.
+2025-11-13T18:26:19.642+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=83c9befa-a92a-330e-843a-17d9541d1c0a
+2025-11-13T18:26:19.660+07:00  WARN 14616 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-13T18:26:19.661+07:00  WARN 14616 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-11-13T18:26:19.735+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-11-13T18:26:19.739+07:00  INFO 14616 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-13T18:26:19.740+07:00  INFO 14616 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-13T18:26:19.804+07:00  INFO 14616 --- [drone-service] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-11-13T18:26:19.804+07:00  INFO 14616 --- [drone-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 442 ms
+2025-11-13T18:26:19.836+07:00  INFO 14616 --- [drone-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-13T18:26:19.840+07:00  INFO 14616 --- [drone-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-13T18:26:19.849+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-13T18:26:19.850+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-11-13T18:26:19.925+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@1e57ba88
+2025-11-13T18:26:19.925+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-11-13T18:26:19.934+07:00  WARN 14616 --- [drone-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-13T18:26:19.996+07:00  INFO 14616 --- [drone-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-13T18:26:20.032+07:00  INFO 14616 --- [drone-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:26:20.184+07:00  WARN 14616 --- [drone-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-13T18:26:20.341+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-13T18:26:21.356+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:26:22.385+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:26:22.405+07:00  INFO 14616 --- [drone-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-11-13T18:26:22.422+07:00  WARN 14616 --- [drone-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-13T18:26:22.435+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-11-13T18:26:22.439+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-11-13T18:26:22.439+07:00  INFO 14616 --- [drone-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T18:26:22.440+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-11-13T18:26:22.440+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-11-13T18:26:22.440+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-11-13T18:26:22.440+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-11-13T18:26:22.441+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-11-13T18:26:22.441+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-11-13T18:26:22.441+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-11-13T18:26:22.519+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-11-13T18:26:22.520+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-11-13T18:26:22.520+07:00  INFO 14616 --- [drone-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-13T18:26:22.520+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1763033182520 with initial instances count: 1
+2025-11-13T18:26:22.522+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DRONE-SERVICE with eureka with status UP
+2025-11-13T18:26:22.523+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033182522, current=UP, previous=STARTING]
+2025-11-13T18:26:22.523+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:26:22.527+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-11-13T18:26:22.528+07:00  INFO 14616 --- [drone-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2025-11-13T18:26:22.549+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:26:23.552+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:26:23.556+07:00  INFO 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Started DroneServiceApplication in 5.237 seconds (process running for 780.43)
+2025-11-13T18:26:23.559+07:00  INFO 14616 --- [drone-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-11-13T18:26:24.833+07:00  INFO 14616 --- [drone-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-13T18:26:24.837+07:00  INFO 14616 --- [drone-service] [Thread-9] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application DRONE-SERVICE with eureka with status DOWN
+2025-11-13T18:26:24.838+07:00  INFO 14616 --- [drone-service] [Thread-9] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033184838, current=DOWN, previous=UP]
+2025-11-13T18:26:24.839+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:26:24.855+07:00  INFO 14616 --- [drone-service] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:26:24.856+07:00  INFO 14616 --- [drone-service] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-11-13T18:26:24.862+07:00  INFO 14616 --- [drone-service] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-11-13T18:26:24.867+07:00  INFO 14616 --- [drone-service] [Thread-9] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-11-13T18:26:24.869+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:26:24.873+07:00  INFO 14616 --- [drone-service] [Thread-9] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-11-13T18:26:24.882+07:00  INFO 14616 --- [drone-service] [Thread-9] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - deregister  status: 200
+2025-11-13T18:26:24.883+07:00  INFO 14616 --- [drone-service] [Thread-9] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-11-13T18:26:26.024+07:00  INFO 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Starting DroneServiceApplication using Java 21.0.7 with PID 14616 (C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service\target\classes started by THUY LINH in C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service)
+2025-11-13T18:26:26.026+07:00 DEBUG 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-13T18:26:26.028+07:00  INFO 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-11-13T18:26:26.220+07:00  INFO 14616 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-13T18:26:26.228+07:00  INFO 14616 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 1 JPA repository interface.
+2025-11-13T18:26:26.333+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=83c9befa-a92a-330e-843a-17d9541d1c0a
+2025-11-13T18:26:26.355+07:00  WARN 14616 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-13T18:26:26.356+07:00  WARN 14616 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-11-13T18:26:26.419+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-11-13T18:26:26.421+07:00  INFO 14616 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-13T18:26:26.421+07:00  INFO 14616 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-13T18:26:26.449+07:00  INFO 14616 --- [drone-service] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-11-13T18:26:26.450+07:00  INFO 14616 --- [drone-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 414 ms
+2025-11-13T18:26:26.499+07:00  INFO 14616 --- [drone-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-13T18:26:26.503+07:00  INFO 14616 --- [drone-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-13T18:26:26.512+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-13T18:26:26.513+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-11-13T18:26:26.689+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@1d7cef6b
+2025-11-13T18:26:26.690+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-11-13T18:26:26.703+07:00  WARN 14616 --- [drone-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-13T18:26:26.748+07:00  INFO 14616 --- [drone-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-13T18:26:26.776+07:00  INFO 14616 --- [drone-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:26:26.847+07:00  WARN 14616 --- [drone-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-13T18:26:26.966+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-13T18:26:27.991+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:26:29.050+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:26:29.059+07:00  INFO 14616 --- [drone-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-11-13T18:26:29.074+07:00  WARN 14616 --- [drone-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-13T18:26:29.086+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-11-13T18:26:29.090+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-11-13T18:26:29.090+07:00  INFO 14616 --- [drone-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T18:26:29.090+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-11-13T18:26:29.091+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-11-13T18:26:29.091+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-11-13T18:26:29.091+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-11-13T18:26:29.091+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-11-13T18:26:29.091+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-11-13T18:26:29.091+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-11-13T18:26:29.142+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-11-13T18:26:29.143+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-11-13T18:26:29.144+07:00  INFO 14616 --- [drone-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-13T18:26:29.144+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1763033189144 with initial instances count: 1
+2025-11-13T18:26:29.145+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DRONE-SERVICE with eureka with status UP
+2025-11-13T18:26:29.146+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033189146, current=UP, previous=STARTING]
+2025-11-13T18:26:29.146+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:26:29.153+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-11-13T18:26:29.154+07:00  INFO 14616 --- [drone-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2025-11-13T18:26:29.162+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:26:30.168+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:26:30.172+07:00  INFO 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Started DroneServiceApplication in 5.213 seconds (process running for 787.045)
+2025-11-13T18:26:30.174+07:00  INFO 14616 --- [drone-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-11-13T18:26:43.620+07:00  INFO 14616 --- [drone-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-13T18:26:43.620+07:00  INFO 14616 --- [drone-service] [Thread-19] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application DRONE-SERVICE with eureka with status DOWN
+2025-11-13T18:26:43.620+07:00  INFO 14616 --- [drone-service] [Thread-19] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033203620, current=DOWN, previous=UP]
+2025-11-13T18:26:43.620+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:26:43.642+07:00  INFO 14616 --- [drone-service] [Thread-19] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:26:43.643+07:00  INFO 14616 --- [drone-service] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-11-13T18:26:43.661+07:00  INFO 14616 --- [drone-service] [Thread-19] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-11-13T18:26:43.675+07:00  INFO 14616 --- [drone-service] [Thread-19] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-11-13T18:26:43.693+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:26:43.696+07:00  INFO 14616 --- [drone-service] [Thread-19] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-11-13T18:26:43.725+07:00  INFO 14616 --- [drone-service] [Thread-19] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - deregister  status: 200
+2025-11-13T18:26:43.726+07:00  INFO 14616 --- [drone-service] [Thread-19] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-11-13T18:26:44.943+07:00  INFO 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Starting DroneServiceApplication using Java 21.0.7 with PID 14616 (C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service\target\classes started by THUY LINH in C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service)
+2025-11-13T18:26:44.943+07:00 DEBUG 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-13T18:26:44.944+07:00  INFO 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-11-13T18:26:45.525+07:00  INFO 14616 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-13T18:26:45.549+07:00  INFO 14616 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 1 JPA repository interface.
+2025-11-13T18:26:45.734+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=83c9befa-a92a-330e-843a-17d9541d1c0a
+2025-11-13T18:26:45.776+07:00  WARN 14616 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-13T18:26:45.776+07:00  WARN 14616 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-11-13T18:26:45.836+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-11-13T18:26:45.848+07:00  INFO 14616 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-13T18:26:45.848+07:00  INFO 14616 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-13T18:26:45.891+07:00  INFO 14616 --- [drone-service] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-11-13T18:26:45.891+07:00  INFO 14616 --- [drone-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 942 ms
+2025-11-13T18:26:45.991+07:00  INFO 14616 --- [drone-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-13T18:26:45.997+07:00  INFO 14616 --- [drone-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-13T18:26:46.011+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-13T18:26:46.011+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-11-13T18:26:46.106+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@18e27957
+2025-11-13T18:26:46.122+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-11-13T18:26:46.122+07:00  WARN 14616 --- [drone-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-13T18:26:46.199+07:00  INFO 14616 --- [drone-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-13T18:26:46.242+07:00  INFO 14616 --- [drone-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:26:46.335+07:00  WARN 14616 --- [drone-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-13T18:26:46.511+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-13T18:26:47.528+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:26:48.579+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:26:48.605+07:00  INFO 14616 --- [drone-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-11-13T18:26:48.632+07:00  WARN 14616 --- [drone-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-13T18:26:48.648+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-11-13T18:26:48.664+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-11-13T18:26:48.664+07:00  INFO 14616 --- [drone-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T18:26:48.664+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-11-13T18:26:48.664+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-11-13T18:26:48.664+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-11-13T18:26:48.664+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-11-13T18:26:48.664+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-11-13T18:26:48.664+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-11-13T18:26:48.664+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-11-13T18:26:48.727+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-11-13T18:26:48.727+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-11-13T18:26:48.727+07:00  INFO 14616 --- [drone-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-13T18:26:48.727+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1763033208727 with initial instances count: 1
+2025-11-13T18:26:48.730+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DRONE-SERVICE with eureka with status UP
+2025-11-13T18:26:48.732+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033208732, current=UP, previous=STARTING]
+2025-11-13T18:26:48.732+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:26:48.743+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-11-13T18:26:48.745+07:00  INFO 14616 --- [drone-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2025-11-13T18:26:48.761+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:26:49.765+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:26:49.775+07:00  INFO 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Started DroneServiceApplication in 5.933 seconds (process running for 806.649)
+2025-11-13T18:26:49.775+07:00  INFO 14616 --- [drone-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-11-13T18:26:51.020+07:00  INFO 14616 --- [drone-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 0 deletions, 4 modifications)
+2025-11-13T18:26:51.024+07:00  INFO 14616 --- [drone-service] [Thread-25] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application DRONE-SERVICE with eureka with status DOWN
+2025-11-13T18:26:51.025+07:00  INFO 14616 --- [drone-service] [Thread-25] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033211025, current=DOWN, previous=UP]
+2025-11-13T18:26:51.026+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:26:51.044+07:00  INFO 14616 --- [drone-service] [Thread-25] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:26:51.044+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:26:51.044+07:00  INFO 14616 --- [drone-service] [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2025-11-13T18:26:51.058+07:00  INFO 14616 --- [drone-service] [Thread-25] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2025-11-13T18:26:51.064+07:00  INFO 14616 --- [drone-service] [Thread-25] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-11-13T18:26:54.068+07:00  INFO 14616 --- [drone-service] [Thread-25] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-11-13T18:26:54.083+07:00  INFO 14616 --- [drone-service] [Thread-25] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - deregister  status: 200
+2025-11-13T18:26:54.083+07:00  INFO 14616 --- [drone-service] [Thread-25] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-11-13T18:26:55.248+07:00  INFO 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Starting DroneServiceApplication using Java 21.0.7 with PID 14616 (C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service\target\classes started by THUY LINH in C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service)
+2025-11-13T18:26:55.248+07:00 DEBUG 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-13T18:26:55.249+07:00  INFO 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-11-13T18:26:55.804+07:00  INFO 14616 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-13T18:26:55.827+07:00  INFO 14616 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interface.
+2025-11-13T18:26:55.958+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=83c9befa-a92a-330e-843a-17d9541d1c0a
+2025-11-13T18:26:56.004+07:00  WARN 14616 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-13T18:26:56.005+07:00  WARN 14616 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-11-13T18:26:56.119+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-11-13T18:26:56.121+07:00  INFO 14616 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-13T18:26:56.121+07:00  INFO 14616 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-13T18:26:56.161+07:00  INFO 14616 --- [drone-service] [restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2025-11-13T18:26:56.162+07:00  INFO 14616 --- [drone-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 900 ms
+2025-11-13T18:26:56.218+07:00  INFO 14616 --- [drone-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-13T18:26:56.221+07:00  INFO 14616 --- [drone-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-13T18:26:56.231+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-13T18:26:56.232+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2025-11-13T18:26:56.300+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-6 - Added connection org.postgresql.jdbc.PgConnection@56580249
+2025-11-13T18:26:56.301+07:00  INFO 14616 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2025-11-13T18:26:56.312+07:00  WARN 14616 --- [drone-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-13T18:26:56.376+07:00  INFO 14616 --- [drone-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-13T18:26:56.405+07:00  INFO 14616 --- [drone-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:26:56.531+07:00  WARN 14616 --- [drone-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-13T18:26:56.822+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-13T18:26:57.883+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:26:58.956+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:26:58.980+07:00  INFO 14616 --- [drone-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-11-13T18:26:59.010+07:00  WARN 14616 --- [drone-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-13T18:26:59.022+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-11-13T18:26:59.031+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-11-13T18:26:59.031+07:00  INFO 14616 --- [drone-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T18:26:59.035+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-11-13T18:26:59.035+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-11-13T18:26:59.036+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-11-13T18:26:59.036+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-11-13T18:26:59.036+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-11-13T18:26:59.036+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-11-13T18:26:59.039+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-11-13T18:26:59.175+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-11-13T18:26:59.176+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-11-13T18:26:59.177+07:00  INFO 14616 --- [drone-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-13T18:26:59.177+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1763033219177 with initial instances count: 1
+2025-11-13T18:26:59.180+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DRONE-SERVICE with eureka with status UP
+2025-11-13T18:26:59.181+07:00  INFO 14616 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033219181, current=UP, previous=STARTING]
+2025-11-13T18:26:59.182+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:26:59.191+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-11-13T18:26:59.193+07:00  INFO 14616 --- [drone-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2025-11-13T18:26:59.217+07:00  INFO 14616 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:27:00.208+07:00  INFO 14616 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:27:00.217+07:00  INFO 14616 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Started DroneServiceApplication in 6.06 seconds (process running for 817.088)
+2025-11-13T18:27:00.221+07:00  INFO 14616 --- [drone-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-11-13T18:27:28.564+07:00  INFO 10128 --- [drone-service] [main] c.f.d.DroneServiceApplicationTests       : Starting DroneServiceApplicationTests using Java 21.0.7 with PID 10128 (started by THUY LINH in C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service)
+2025-11-13T18:27:28.566+07:00 DEBUG 10128 --- [drone-service] [main] c.f.d.DroneServiceApplicationTests       : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-13T18:27:28.566+07:00  INFO 10128 --- [drone-service] [main] c.f.d.DroneServiceApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2025-11-13T18:27:30.386+07:00  INFO 10128 --- [drone-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-13T18:27:30.683+07:00  INFO 10128 --- [drone-service] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 281 ms. Found 1 JPA repository interface.
+2025-11-13T18:27:31.056+07:00  INFO 10128 --- [drone-service] [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=818a9c20-1d7e-384e-aca1-68f557557458
+2025-11-13T18:27:49.627+07:00  WARN 10128 --- [drone-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-13T18:27:49.688+07:00  WARN 10128 --- [drone-service] [main] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-11-13T18:27:50.649+07:00  INFO 10128 --- [drone-service] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-13T18:27:55.232+07:00  INFO 10128 --- [drone-service] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-13T18:27:55.383+07:00  INFO 10128 --- [drone-service] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-13T18:27:56.101+07:00  INFO 10128 --- [drone-service] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-13T18:27:56.153+07:00  INFO 10128 --- [drone-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-13T18:27:56.470+07:00  INFO 10128 --- [drone-service] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@24615687
+2025-11-13T18:27:56.472+07:00  INFO 10128 --- [drone-service] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-13T18:27:56.589+07:00  WARN 10128 --- [drone-service] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-13T18:27:58.105+07:00  INFO 10128 --- [drone-service] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-13T18:27:58.257+07:00  INFO 10128 --- [drone-service] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:27:58.988+07:00  WARN 10128 --- [drone-service] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-13T18:28:00.817+07:00  INFO 10128 --- [drone-service] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:28:01.884+07:00  INFO 10128 --- [drone-service] [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:28:01.927+07:00  INFO 10128 --- [drone-service] [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-11-13T18:28:02.000+07:00  WARN 10128 --- [drone-service] [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-13T18:28:02.027+07:00  INFO 10128 --- [drone-service] [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-11-13T18:28:02.064+07:00  INFO 10128 --- [drone-service] [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-11-13T18:28:02.070+07:00  INFO 10128 --- [drone-service] [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T18:28:02.093+07:00  INFO 10128 --- [drone-service] [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-11-13T18:28:02.094+07:00  INFO 10128 --- [drone-service] [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-11-13T18:28:02.094+07:00  INFO 10128 --- [drone-service] [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-11-13T18:28:02.094+07:00  INFO 10128 --- [drone-service] [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-11-13T18:28:02.094+07:00  INFO 10128 --- [drone-service] [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-11-13T18:28:02.094+07:00  INFO 10128 --- [drone-service] [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-11-13T18:28:02.095+07:00  INFO 10128 --- [drone-service] [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-11-13T18:28:02.659+07:00  INFO 10128 --- [drone-service] [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-11-13T18:28:02.664+07:00  INFO 10128 --- [drone-service] [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-11-13T18:28:02.667+07:00  INFO 10128 --- [drone-service] [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-13T18:28:02.670+07:00  INFO 10128 --- [drone-service] [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1763033282669 with initial instances count: 1
+2025-11-13T18:28:02.677+07:00  INFO 10128 --- [drone-service] [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DRONE-SERVICE with eureka with status UP
+2025-11-13T18:28:02.677+07:00  INFO 10128 --- [drone-service] [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033282677, current=UP, previous=STARTING]
+2025-11-13T18:28:02.679+07:00  INFO 10128 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:28:02.689+07:00  INFO 10128 --- [drone-service] [main] c.f.d.DroneServiceApplicationTests       : Started DroneServiceApplicationTests in 35.777 seconds (process running for 38.714)
+2025-11-13T18:28:02.760+07:00  INFO 10128 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:28:03.593+07:00  INFO 10128 --- [drone-service] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application DRONE-SERVICE with eureka with status DOWN
+2025-11-13T18:28:03.594+07:00  INFO 10128 --- [drone-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033283593, current=DOWN, previous=UP]
+2025-11-13T18:28:03.594+07:00  INFO 10128 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:28:03.598+07:00  INFO 10128 --- [drone-service] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:28:03.600+07:00  INFO 10128 --- [drone-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-13T18:28:03.604+07:00  INFO 10128 --- [drone-service] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-13T18:28:03.605+07:00  INFO 10128 --- [drone-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-11-13T18:28:03.612+07:00  INFO 10128 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:28:03.613+07:00  INFO 10128 --- [drone-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-11-13T18:28:03.637+07:00  INFO 10128 --- [drone-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - deregister  status: 200
+2025-11-13T18:28:03.637+07:00  INFO 10128 --- [drone-service] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-11-13T18:28:24.027+07:00  INFO 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Starting DroneServiceApplication using Java 21.0.7 with PID 10308 (C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service\target\classes started by THUY LINH in C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service)
+2025-11-13T18:28:24.030+07:00 DEBUG 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-13T18:28:24.032+07:00  INFO 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-11-13T18:28:24.083+07:00  INFO 10308 --- [drone-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-13T18:28:24.084+07:00  INFO 10308 --- [drone-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-13T18:28:24.723+07:00  INFO 10308 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-13T18:28:24.862+07:00  INFO 10308 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 131 ms. Found 1 JPA repository interface.
+2025-11-13T18:28:25.104+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=83c9befa-a92a-330e-843a-17d9541d1c0a
+2025-11-13T18:28:25.224+07:00  WARN 10308 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-13T18:28:25.227+07:00  WARN 10308 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-11-13T18:28:25.609+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-11-13T18:28:25.624+07:00  INFO 10308 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-13T18:28:25.625+07:00  INFO 10308 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-13T18:28:25.676+07:00  INFO 10308 --- [drone-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-13T18:28:25.677+07:00  INFO 10308 --- [drone-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1592 ms
+2025-11-13T18:28:25.843+07:00  INFO 10308 --- [drone-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-13T18:28:25.893+07:00  INFO 10308 --- [drone-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-13T18:28:25.920+07:00  INFO 10308 --- [drone-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-13T18:28:26.171+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-13T18:28:26.199+07:00  INFO 10308 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-13T18:28:26.496+07:00  INFO 10308 --- [drone-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4b5c56e1
+2025-11-13T18:28:26.502+07:00  INFO 10308 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-13T18:28:26.537+07:00  WARN 10308 --- [drone-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-13T18:28:27.298+07:00  INFO 10308 --- [drone-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-13T18:28:27.364+07:00  INFO 10308 --- [drone-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:28:27.660+07:00  WARN 10308 --- [drone-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-13T18:28:28.035+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-13T18:28:29.063+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:28:30.098+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:28:30.127+07:00  INFO 10308 --- [drone-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-11-13T18:28:30.164+07:00  WARN 10308 --- [drone-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-13T18:28:30.203+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-11-13T18:28:30.226+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-11-13T18:28:30.233+07:00  INFO 10308 --- [drone-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T18:28:30.240+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-11-13T18:28:30.241+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-11-13T18:28:30.241+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-11-13T18:28:30.242+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-11-13T18:28:30.242+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-11-13T18:28:30.242+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-11-13T18:28:30.242+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-11-13T18:28:30.615+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-11-13T18:28:30.617+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-11-13T18:28:30.619+07:00  INFO 10308 --- [drone-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-13T18:28:30.622+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1763033310620 with initial instances count: 0
+2025-11-13T18:28:30.625+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DRONE-SERVICE with eureka with status UP
+2025-11-13T18:28:30.626+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033310626, current=UP, previous=STARTING]
+2025-11-13T18:28:30.628+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:28:30.652+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-11-13T18:28:30.654+07:00  INFO 10308 --- [drone-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2025-11-13T18:28:30.672+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:28:31.668+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:28:31.680+07:00  INFO 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Started DroneServiceApplication in 9.136 seconds (process running for 9.589)
+2025-11-13T18:29:00.631+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-11-13T18:29:00.631+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-11-13T18:29:00.631+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-11-13T18:29:00.631+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-11-13T18:29:00.631+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-11-13T18:29:00.631+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2025-11-13T18:29:00.631+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-11-13T18:29:00.706+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-11-13T18:33:30.278+07:00  INFO 10308 --- [drone-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T18:33:39.476+07:00  INFO 10308 --- [drone-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-13T18:33:39.579+07:00  INFO 10308 --- [drone-service] [Thread-6] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application DRONE-SERVICE with eureka with status DOWN
+2025-11-13T18:33:39.583+07:00  INFO 10308 --- [drone-service] [Thread-6] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033619583, current=DOWN, previous=UP]
+2025-11-13T18:33:39.584+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:33:39.661+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:33:39.798+07:00  INFO 10308 --- [drone-service] [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:33:39.927+07:00  INFO 10308 --- [drone-service] [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-11-13T18:33:39.976+07:00  INFO 10308 --- [drone-service] [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-11-13T18:33:40.006+07:00  INFO 10308 --- [drone-service] [Thread-6] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-11-13T18:33:43.023+07:00  INFO 10308 --- [drone-service] [Thread-6] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-11-13T18:33:43.065+07:00  INFO 10308 --- [drone-service] [Thread-6] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - deregister  status: 200
+2025-11-13T18:33:43.070+07:00  INFO 10308 --- [drone-service] [Thread-6] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-11-13T18:33:44.418+07:00  INFO 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Starting DroneServiceApplication using Java 21.0.7 with PID 10308 (C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service\target\classes started by THUY LINH in C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service)
+2025-11-13T18:33:44.419+07:00 DEBUG 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-13T18:33:44.419+07:00  INFO 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-11-13T18:33:44.872+07:00  INFO 10308 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-13T18:33:44.890+07:00  INFO 10308 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 1 JPA repository interface.
+2025-11-13T18:33:45.041+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=83c9befa-a92a-330e-843a-17d9541d1c0a
+2025-11-13T18:33:45.084+07:00  WARN 10308 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-13T18:33:45.085+07:00  WARN 10308 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-11-13T18:33:45.201+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-11-13T18:33:45.203+07:00  INFO 10308 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-13T18:33:45.204+07:00  INFO 10308 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-13T18:33:45.236+07:00  INFO 10308 --- [drone-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-13T18:33:45.236+07:00  INFO 10308 --- [drone-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 812 ms
+2025-11-13T18:33:45.286+07:00  INFO 10308 --- [drone-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-13T18:33:45.290+07:00  INFO 10308 --- [drone-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-13T18:33:45.301+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-13T18:33:45.304+07:00  INFO 10308 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-11-13T18:33:45.521+07:00  INFO 10308 --- [drone-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@aed5304
+2025-11-13T18:33:45.522+07:00  INFO 10308 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-11-13T18:33:45.574+07:00  WARN 10308 --- [drone-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-13T18:33:45.622+07:00  INFO 10308 --- [drone-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-13T18:33:45.701+07:00  INFO 10308 --- [drone-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:33:45.783+07:00  WARN 10308 --- [drone-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-13T18:33:46.100+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-13T18:33:47.185+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:33:48.529+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:33:48.547+07:00  INFO 10308 --- [drone-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-13T18:33:48.565+07:00  INFO 10308 --- [drone-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-11-13T18:33:48.596+07:00  WARN 10308 --- [drone-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-13T18:33:48.610+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-11-13T18:33:48.610+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-11-13T18:33:48.610+07:00  INFO 10308 --- [drone-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T18:33:48.610+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-11-13T18:33:48.610+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-11-13T18:33:48.610+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-11-13T18:33:48.610+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-11-13T18:33:48.610+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-11-13T18:33:48.610+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-11-13T18:33:48.610+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-11-13T18:33:48.741+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-11-13T18:33:48.746+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-11-13T18:33:48.746+07:00  INFO 10308 --- [drone-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-13T18:33:48.746+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1763033628746 with initial instances count: 1
+2025-11-13T18:33:48.752+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DRONE-SERVICE with eureka with status UP
+2025-11-13T18:33:48.752+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033628752, current=UP, previous=STARTING]
+2025-11-13T18:33:48.752+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:33:48.765+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-11-13T18:33:48.765+07:00  INFO 10308 --- [drone-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2025-11-13T18:33:48.789+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:33:49.786+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:33:49.797+07:00  INFO 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Started DroneServiceApplication in 6.449 seconds (process running for 327.692)
+2025-11-13T18:33:49.797+07:00  INFO 10308 --- [drone-service] [Thread-9] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application DRONE-SERVICE with eureka with status DOWN
+2025-11-13T18:33:49.797+07:00  INFO 10308 --- [drone-service] [Thread-9] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033629797, current=DOWN, previous=UP]
+2025-11-13T18:33:49.801+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:33:49.805+07:00  INFO 10308 --- [drone-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-11-13T18:33:49.820+07:00  INFO 10308 --- [drone-service] [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:33:49.822+07:00  INFO 10308 --- [drone-service] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-11-13T18:33:49.822+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:33:49.825+07:00  INFO 10308 --- [drone-service] [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-11-13T18:33:49.837+07:00  INFO 10308 --- [drone-service] [Thread-9] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-11-13T18:33:52.855+07:00  INFO 10308 --- [drone-service] [Thread-9] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-11-13T18:33:52.875+07:00  INFO 10308 --- [drone-service] [Thread-9] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - deregister  status: 200
+2025-11-13T18:33:52.876+07:00  INFO 10308 --- [drone-service] [Thread-9] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-11-13T18:33:53.993+07:00  INFO 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Starting DroneServiceApplication using Java 21.0.7 with PID 10308 (C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service\target\classes started by THUY LINH in C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service)
+2025-11-13T18:33:53.994+07:00 DEBUG 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-13T18:33:53.995+07:00  INFO 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-11-13T18:33:54.263+07:00  INFO 10308 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-13T18:33:54.275+07:00  INFO 10308 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interface.
+2025-11-13T18:33:54.369+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=83c9befa-a92a-330e-843a-17d9541d1c0a
+2025-11-13T18:33:54.392+07:00  WARN 10308 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-13T18:33:54.393+07:00  WARN 10308 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-11-13T18:33:54.472+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-11-13T18:33:54.473+07:00  INFO 10308 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-13T18:33:54.474+07:00  INFO 10308 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-13T18:33:54.509+07:00  INFO 10308 --- [drone-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-13T18:33:54.509+07:00  INFO 10308 --- [drone-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 509 ms
+2025-11-13T18:33:54.557+07:00  INFO 10308 --- [drone-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-13T18:33:54.561+07:00  INFO 10308 --- [drone-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-13T18:33:54.576+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-13T18:33:54.577+07:00  INFO 10308 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2025-11-13T18:33:54.656+07:00  INFO 10308 --- [drone-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-3 - Added connection org.postgresql.jdbc.PgConnection@6977cbd0
+2025-11-13T18:33:54.656+07:00  INFO 10308 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2025-11-13T18:33:54.666+07:00  WARN 10308 --- [drone-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-13T18:33:54.722+07:00  INFO 10308 --- [drone-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-13T18:33:54.767+07:00  INFO 10308 --- [drone-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:33:54.856+07:00  WARN 10308 --- [drone-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-13T18:33:54.958+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-13T18:33:55.973+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:33:57.023+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:33:57.039+07:00  INFO 10308 --- [drone-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-11-13T18:33:57.043+07:00  INFO 10308 --- [drone-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-11-13T18:33:57.072+07:00  WARN 10308 --- [drone-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-13T18:33:57.082+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-11-13T18:33:57.088+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-11-13T18:33:57.089+07:00  INFO 10308 --- [drone-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T18:33:57.089+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-11-13T18:33:57.090+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-11-13T18:33:57.091+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-11-13T18:33:57.091+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-11-13T18:33:57.091+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-11-13T18:33:57.091+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-11-13T18:33:57.091+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-11-13T18:33:57.129+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-11-13T18:33:57.131+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-11-13T18:33:57.132+07:00  INFO 10308 --- [drone-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-13T18:33:57.132+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1763033637132 with initial instances count: 1
+2025-11-13T18:33:57.134+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DRONE-SERVICE with eureka with status UP
+2025-11-13T18:33:57.134+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033637134, current=UP, previous=STARTING]
+2025-11-13T18:33:57.135+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:33:57.140+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-11-13T18:33:57.142+07:00  INFO 10308 --- [drone-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2025-11-13T18:33:57.163+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:33:58.163+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:33:58.168+07:00  INFO 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Started DroneServiceApplication in 5.222 seconds (process running for 336.062)
+2025-11-13T18:33:58.168+07:00  INFO 10308 --- [drone-service] [Thread-15] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application DRONE-SERVICE with eureka with status DOWN
+2025-11-13T18:33:58.168+07:00  INFO 10308 --- [drone-service] [Thread-15] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033638168, current=DOWN, previous=UP]
+2025-11-13T18:33:58.168+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:33:58.168+07:00  INFO 10308 --- [drone-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-11-13T18:33:58.183+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:33:58.185+07:00  INFO 10308 --- [drone-service] [Thread-15] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:33:58.185+07:00  INFO 10308 --- [drone-service] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2025-11-13T18:33:58.190+07:00  INFO 10308 --- [drone-service] [Thread-15] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2025-11-13T18:33:58.197+07:00  INFO 10308 --- [drone-service] [Thread-15] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-11-13T18:34:01.207+07:00  INFO 10308 --- [drone-service] [Thread-15] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-11-13T18:34:01.223+07:00  INFO 10308 --- [drone-service] [Thread-15] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - deregister  status: 200
+2025-11-13T18:34:01.234+07:00  INFO 10308 --- [drone-service] [Thread-15] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-11-13T18:34:02.404+07:00  INFO 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Starting DroneServiceApplication using Java 21.0.7 with PID 10308 (C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service\target\classes started by THUY LINH in C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service)
+2025-11-13T18:34:02.404+07:00 DEBUG 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-13T18:34:02.404+07:00  INFO 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-11-13T18:34:02.806+07:00  INFO 10308 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-13T18:34:02.822+07:00  INFO 10308 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11 ms. Found 1 JPA repository interface.
+2025-11-13T18:34:02.967+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=83c9befa-a92a-330e-843a-17d9541d1c0a
+2025-11-13T18:34:03.020+07:00  WARN 10308 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-13T18:34:03.020+07:00  WARN 10308 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-11-13T18:34:03.104+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-11-13T18:34:03.104+07:00  INFO 10308 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-13T18:34:03.104+07:00  INFO 10308 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-13T18:34:03.154+07:00  INFO 10308 --- [drone-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-13T18:34:03.154+07:00  INFO 10308 --- [drone-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 750 ms
+2025-11-13T18:34:03.215+07:00  INFO 10308 --- [drone-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-13T18:34:03.223+07:00  INFO 10308 --- [drone-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-13T18:34:03.236+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-13T18:34:03.236+07:00  INFO 10308 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2025-11-13T18:34:03.315+07:00  INFO 10308 --- [drone-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-4 - Added connection org.postgresql.jdbc.PgConnection@2924077e
+2025-11-13T18:34:03.315+07:00  INFO 10308 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2025-11-13T18:34:03.331+07:00  WARN 10308 --- [drone-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-13T18:34:03.428+07:00  INFO 10308 --- [drone-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-13T18:34:03.465+07:00  INFO 10308 --- [drone-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:34:03.553+07:00  WARN 10308 --- [drone-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-13T18:34:03.767+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-13T18:34:04.795+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:34:05.830+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:34:05.857+07:00  INFO 10308 --- [drone-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-11-13T18:34:05.878+07:00  WARN 10308 --- [drone-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-13T18:34:05.894+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-11-13T18:34:05.894+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-11-13T18:34:05.894+07:00  INFO 10308 --- [drone-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T18:34:05.894+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-11-13T18:34:05.894+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-11-13T18:34:05.904+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-11-13T18:34:05.904+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-11-13T18:34:05.904+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-11-13T18:34:05.904+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-11-13T18:34:05.904+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-11-13T18:34:05.959+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-11-13T18:34:05.959+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-11-13T18:34:05.977+07:00  INFO 10308 --- [drone-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-13T18:34:05.977+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1763033645977 with initial instances count: 1
+2025-11-13T18:34:05.982+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DRONE-SERVICE with eureka with status UP
+2025-11-13T18:34:05.986+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033645984, current=UP, previous=STARTING]
+2025-11-13T18:34:05.986+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:34:05.992+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-11-13T18:34:05.996+07:00  INFO 10308 --- [drone-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2025-11-13T18:34:06.024+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:34:07.024+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:34:07.029+07:00  INFO 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Started DroneServiceApplication in 5.731 seconds (process running for 344.922)
+2025-11-13T18:34:07.033+07:00  INFO 10308 --- [drone-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-11-13T18:34:08.291+07:00  INFO 10308 --- [drone-service] [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 4 class path changes (0 additions, 0 deletions, 4 modifications)
+2025-11-13T18:34:08.293+07:00  INFO 10308 --- [drone-service] [Thread-21] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application DRONE-SERVICE with eureka with status DOWN
+2025-11-13T18:34:08.294+07:00  INFO 10308 --- [drone-service] [Thread-21] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033648293, current=DOWN, previous=UP]
+2025-11-13T18:34:08.294+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:34:08.311+07:00  INFO 10308 --- [drone-service] [Thread-21] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:34:08.312+07:00  INFO 10308 --- [drone-service] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2025-11-13T18:34:08.321+07:00  INFO 10308 --- [drone-service] [Thread-21] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2025-11-13T18:34:08.326+07:00  INFO 10308 --- [drone-service] [Thread-21] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-11-13T18:34:08.344+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:34:08.346+07:00  INFO 10308 --- [drone-service] [Thread-21] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-11-13T18:34:08.359+07:00  INFO 10308 --- [drone-service] [Thread-21] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - deregister  status: 200
+2025-11-13T18:34:08.359+07:00  INFO 10308 --- [drone-service] [Thread-21] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2025-11-13T18:34:09.530+07:00  INFO 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Starting DroneServiceApplication using Java 21.0.7 with PID 10308 (C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service\target\classes started by THUY LINH in C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service)
+2025-11-13T18:34:09.530+07:00 DEBUG 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-13T18:34:09.531+07:00  INFO 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-11-13T18:34:09.720+07:00  INFO 10308 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-13T18:34:09.730+07:00  INFO 10308 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interface.
+2025-11-13T18:34:09.810+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=83c9befa-a92a-330e-843a-17d9541d1c0a
+2025-11-13T18:34:09.827+07:00  WARN 10308 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-13T18:34:09.828+07:00  WARN 10308 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-11-13T18:34:09.908+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-11-13T18:34:09.909+07:00  INFO 10308 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-13T18:34:09.910+07:00  INFO 10308 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-13T18:34:09.970+07:00  INFO 10308 --- [drone-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-13T18:34:09.971+07:00  INFO 10308 --- [drone-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 436 ms
+2025-11-13T18:34:10.046+07:00  INFO 10308 --- [drone-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-13T18:34:10.054+07:00  INFO 10308 --- [drone-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-13T18:34:10.077+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-13T18:34:10.078+07:00  INFO 10308 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2025-11-13T18:34:10.174+07:00  INFO 10308 --- [drone-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-5 - Added connection org.postgresql.jdbc.PgConnection@5fbf552e
+2025-11-13T18:34:10.175+07:00  INFO 10308 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2025-11-13T18:34:10.186+07:00  WARN 10308 --- [drone-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-13T18:34:10.254+07:00  INFO 10308 --- [drone-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-13T18:34:10.305+07:00  INFO 10308 --- [drone-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:34:10.405+07:00  WARN 10308 --- [drone-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-13T18:34:10.604+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-13T18:34:11.630+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:34:12.661+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:34:12.673+07:00  INFO 10308 --- [drone-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-11-13T18:34:12.695+07:00  WARN 10308 --- [drone-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-13T18:34:12.710+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-11-13T18:34:12.713+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-11-13T18:34:12.714+07:00  INFO 10308 --- [drone-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T18:34:12.714+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-11-13T18:34:12.715+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-11-13T18:34:12.715+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-11-13T18:34:12.715+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-11-13T18:34:12.715+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-11-13T18:34:12.715+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-11-13T18:34:12.715+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-11-13T18:34:12.745+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-11-13T18:34:12.746+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-11-13T18:34:12.746+07:00  INFO 10308 --- [drone-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-13T18:34:12.746+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1763033652746 with initial instances count: 1
+2025-11-13T18:34:12.752+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DRONE-SERVICE with eureka with status UP
+2025-11-13T18:34:12.753+07:00  INFO 10308 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033652753, current=UP, previous=STARTING]
+2025-11-13T18:34:12.753+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:34:12.758+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-11-13T18:34:12.759+07:00  INFO 10308 --- [drone-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2025-11-13T18:34:12.779+07:00  INFO 10308 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:34:13.777+07:00  INFO 10308 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:34:13.783+07:00  INFO 10308 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Started DroneServiceApplication in 5.319 seconds (process running for 351.681)
+2025-11-13T18:34:13.783+07:00  INFO 10308 --- [drone-service] [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-11-13T18:39:12.759+07:00  INFO 10128 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Starting DroneServiceApplication using Java 21.0.7 with PID 10128 (C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service\target\classes started by THUY LINH in C:\Users\THUY LINH\Desktop\vy\CNPM\CNPM\DoAnCNPM_Backend\drone_service)
+2025-11-13T18:39:12.761+07:00 DEBUG 10128 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Running with Spring Boot v3.3.4, Spring v6.1.13
+2025-11-13T18:39:12.765+07:00  INFO 10128 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : No active profile set, falling back to 1 default profile: "default"
+2025-11-13T18:39:12.815+07:00  INFO 10128 --- [drone-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-13T18:39:12.816+07:00  INFO 10128 --- [drone-service] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-13T18:39:13.497+07:00  INFO 10128 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-13T18:39:13.650+07:00  INFO 10128 --- [drone-service] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 131 ms. Found 1 JPA repository interface.
+2025-11-13T18:39:13.876+07:00  INFO 10128 --- [drone-service] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=83c9befa-a92a-330e-843a-17d9541d1c0a
+2025-11-13T18:39:13.997+07:00  WARN 10128 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2025-11-13T18:39:13.999+07:00  WARN 10128 --- [drone-service] [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2025-11-13T18:39:14.409+07:00  INFO 10128 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8085 (http)
+2025-11-13T18:39:14.420+07:00  INFO 10128 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-13T18:39:14.420+07:00  INFO 10128 --- [drone-service] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.30]
+2025-11-13T18:39:14.471+07:00  INFO 10128 --- [drone-service] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-13T18:39:14.471+07:00  INFO 10128 --- [drone-service] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1655 ms
+2025-11-13T18:39:14.633+07:00  INFO 10128 --- [drone-service] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-13T18:39:14.689+07:00  INFO 10128 --- [drone-service] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.3.Final
+2025-11-13T18:39:14.720+07:00  INFO 10128 --- [drone-service] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-11-13T18:39:14.970+07:00  INFO 10128 --- [drone-service] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-13T18:39:14.998+07:00  INFO 10128 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-11-13T18:39:15.192+07:00  INFO 10128 --- [drone-service] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@55f12775
+2025-11-13T18:39:15.194+07:00  INFO 10128 --- [drone-service] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-11-13T18:39:15.257+07:00  WARN 10128 --- [drone-service] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-13T18:39:15.998+07:00  INFO 10128 --- [drone-service] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-13T18:39:16.105+07:00  INFO 10128 --- [drone-service] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-13T18:39:16.586+07:00  WARN 10128 --- [drone-service] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-13T18:39:17.225+07:00  INFO 10128 --- [drone-service] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2025-11-13T18:39:18.276+07:00  INFO 10128 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:39:19.328+07:00  INFO 10128 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:39:19.361+07:00  INFO 10128 --- [drone-service] [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2025-11-13T18:39:19.423+07:00  WARN 10128 --- [drone-service] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-13T18:39:19.455+07:00  INFO 10128 --- [drone-service] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-11-13T18:39:19.486+07:00  INFO 10128 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-11-13T18:39:19.494+07:00  INFO 10128 --- [drone-service] [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-11-13T18:39:19.502+07:00  INFO 10128 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-11-13T18:39:19.502+07:00  INFO 10128 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-11-13T18:39:19.502+07:00  INFO 10128 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-11-13T18:39:19.502+07:00  INFO 10128 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-11-13T18:39:19.502+07:00  INFO 10128 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-11-13T18:39:19.502+07:00  INFO 10128 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2025-11-13T18:39:19.502+07:00  INFO 10128 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-11-13T18:39:20.771+07:00  INFO 10128 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-11-13T18:39:20.773+07:00  INFO 10128 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2025-11-13T18:39:20.776+07:00  INFO 10128 --- [drone-service] [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2025-11-13T18:39:20.783+07:00  INFO 10128 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1763033960778 with initial instances count: 0
+2025-11-13T18:39:20.783+07:00  INFO 10128 --- [drone-service] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DRONE-SERVICE with eureka with status UP
+2025-11-13T18:39:20.792+07:00  INFO 10128 --- [drone-service] [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1763033960792, current=UP, previous=STARTING]
+2025-11-13T18:39:20.800+07:00  INFO 10128 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085: registering service...
+2025-11-13T18:39:20.849+07:00  INFO 10128 --- [drone-service] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8085 (http) with context path '/'
+2025-11-13T18:39:20.849+07:00  INFO 10128 --- [drone-service] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2025-11-13T18:39:21.241+07:00  INFO 10128 --- [drone-service] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_DRONE-SERVICE/localhost:drone-service:8085 - registration status: 204
+2025-11-13T18:39:21.864+07:00  INFO 10128 --- [drone-service] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2025-11-13T18:39:21.883+07:00  INFO 10128 --- [drone-service] [restartedMain] c.f.d.DroneServiceApplication            : Started DroneServiceApplication in 10.759 seconds (process running for 11.244)
+2025-11-13T18:39:50.788+07:00  INFO 10128 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2025-11-13T18:39:50.789+07:00  INFO 10128 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2025-11-13T18:39:50.789+07:00  INFO 10128 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2025-11-13T18:39:50.789+07:00  INFO 10128 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2025-11-13T18:39:50.789+07:00  INFO 10128 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2025-11-13T18:39:50.789+07:00  INFO 10128 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2025-11-13T18:39:50.790+07:00  INFO 10128 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2025-11-13T18:39:50.836+07:00  INFO 10128 --- [drone-service] [DiscoveryClient-CacheRefreshExecutor-%d] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2025-11-13T18:44:19.534+07:00  INFO 10128 --- [drone-service] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
