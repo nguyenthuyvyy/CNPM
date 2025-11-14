@@ -1,13 +1,13 @@
 services:
   postgres-db:
-    image: postgres:18
+    image: postgres:16
     container_name: postgres-db
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 1
       POSTGRES_DB: foodfast_db
     ports:
-      - "5433:5432"  # host port 5433 → container port 5432
+      - "5433:5432"  
     volumes:
       - pgdata:/var/lib/postgresql/data
     networks:
