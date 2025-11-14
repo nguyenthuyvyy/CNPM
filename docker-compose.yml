@@ -72,11 +72,47 @@ services:
     networks:
       - foodfast-net
 
+  restaurant-service:
+    build: ./DoAnCNPM_Backend/restaurant-service
+    container_name: restaurant-service
+    ports:
+      - "8083:8083"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/foodfast_db
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=1
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.PostgreSQLDialect
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    depends_on:
+      - postgres-db
+      - eureka-server
+    networks:
+      - foodfast-net
+
   order-service:
     build: ./DoAnCNPM_Backend/order_service
     container_name: order-service
     ports:
       - "8082:8082"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/foodfast_db
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=1
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.PostgreSQLDialect
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    depends_on:
+      - postgres-db
+      - eureka-server
+    networks:
+      - foodfast-net
+
+  drone-service:
+    build: ./DoAnCNPM_Backend/drone_service
+    container_name: drone-service
+    ports:
+      - "8086:8086"
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/foodfast_db
       - SPRING_DATASOURCE_USERNAME=postgres
@@ -107,27 +143,10 @@ services:
       - eureka-server
     networks:
       - foodfast-net
-  drone-service:
-    build: ./DoAnCNPM_Backend/drone_service
-    container_name: drone-service
-    ports:
-      - "8088:8088"
-    environment:
-      - SPRING_APPLICATION_NAME=drone-service
-      - SERVER_PORT=8088
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/foodfast_db
-      - SPRING_DATASOURCE_USERNAME=postgres
-      - SPRING_DATASOURCE_PASSWORD=1
-      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
-    depends_on:
-      - postgres-db
-      - eureka-server
-    networks:
-      - foodfast-net
+
 volumes:
   pgdata:
 
 networks:
   foodfast-net:
     driver: bridge
-  
