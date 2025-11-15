@@ -26,7 +26,7 @@ class OrderServiceUnitTest {
     @Test
     void testCreateOrder() {
         Order order = new Order();
-        order.setTotal(BigDecimal.valueOf(100));
+        order.setTotal(BigDecimal.valueOf(900));
         when(orderRepository.save(order)).thenReturn(order);
 
         Order result = orderService.createOrder(order);
