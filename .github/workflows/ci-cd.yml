@@ -32,7 +32,7 @@ jobs:
 
       - name: Build Order Service
         working-directory: ./DoAnCNPM_Backend/order_service
-        run: mvn clean install -DskipTests
+        run: mvn test
 
       - name: Build Payment Service
         working-directory: ./DoAnCNPM_Backend/payment_service
