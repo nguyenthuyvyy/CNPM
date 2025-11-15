@@ -41,6 +41,12 @@
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
 
+        <!-- Micrometer Prometheus registry -->
+        <dependency>
+            <groupId>io.micrometer</groupId>
+            <artifactId>micrometer-registry-prometheus</artifactId>
+        </dependency>
+
         <!-- Actuator (kiểm tra, giám sát gateway) -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
