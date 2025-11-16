@@ -25,7 +25,7 @@ class PaymentServiceUnitTest {
     @Test
     void testCreatePayment() {
         Payment payment = new Payment();
-        payment.setAmount(BigDecimal.valueOf(100));
+        payment.setAmount(BigDecimal.valueOf(300));
 
         when(paymentRepository.save(payment)).thenReturn(payment);
 
