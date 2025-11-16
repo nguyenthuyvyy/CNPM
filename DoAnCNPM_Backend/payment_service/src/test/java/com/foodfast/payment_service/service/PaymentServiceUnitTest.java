@@ -44,6 +44,6 @@ class PaymentServiceUnitTest {
         when(paymentRepository.save(payment)).thenReturn(payment);
 
         Payment updated = paymentService.updatePaymentStatus(1L, 1);
-        assertEquals(0, updated.getStatus());
+        assertEquals(1, updated.getStatus());
     }
 }
