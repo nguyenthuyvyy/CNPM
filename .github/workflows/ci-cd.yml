@@ -37,7 +37,7 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
-      # --- 4. Build Backend Microservices (skip tests except Order Service) ---
+      # --- 4. Build Backend Microservices  ---
       - name: Build Eureka Server
         working-directory: ./DoAnCNPM_Backend/eureka_server
         run: mvn clean install -DskipTests

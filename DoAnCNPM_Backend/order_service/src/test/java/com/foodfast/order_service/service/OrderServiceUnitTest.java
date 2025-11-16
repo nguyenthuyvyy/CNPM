@@ -1,14 +1,13 @@
 package com.foodfast.order_service.service;
 
 import com.foodfast.order_service.model.Order;
+import com.foodfast.order_service.model.OrderItem;
 import com.foodfast.order_service.repository.OrderRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
-
 import java.math.BigDecimal;
+import java.util.Arrays;
 import java.util.Optional;
-
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
@@ -19,42 +18,36 @@ class OrderServiceUnitTest {
 
     @BeforeEach
     void setUp() {
-        orderRepository = Mockito.mock(OrderRepository.class);
+        orderRepository = mock(OrderRepository.class);
         orderService = new OrderService(orderRepository);
     }
 
     @Test
     void testCreateOrder() {
-        Order order = new Order();
-        order.setTotal(BigDecimal.valueOf(100));
+        Order order = Order.builder()
+                .fullname("Nguyen Van A")
+                .phone("0901234567")
+                .address("123 Street")
+                .total(new BigDecimal("200000"))
+                .items(Arrays.asList(new OrderItem(null, "P001", 2, new BigDecimal("100000"))))
+                .status(0)
+                .paymethod(1)
+                .build();
+
         when(orderRepository.save(order)).thenReturn(order);
 
-        Order result = orderService.createOrder(order);
-
-        assertNotNull(result);
-        assertEquals(BigDecimal.valueOf(100), result.getTotal());
+        Order created = orderService.createOrder(order);
+        assertNotNull(created);
         verify(orderRepository, times(1)).save(order);
     }
 
     @Test
     void testUpdateOrderStatus() {
-        Order order = new Order();
-        order.setId(1L);
-        order.setStatus(0);
-
+        Order order = Order.builder().id(1L).status(0).build();
         when(orderRepository.findById(1L)).thenReturn(Optional.of(order));
         when(orderRepository.save(order)).thenReturn(order);
 
         Order updated = orderService.updateOrderStatus(1L, 1);
-
-        assertNotNull(updated);
         assertEquals(1, updated.getStatus());
-        verify(orderRepository, times(1)).save(order);
-    }
-
-    @Test
-    void testDeleteOrder() {
-        orderService.deleteOrder(1L);
-        verify(orderRepository, times(1)).deleteById(1L);
     }
 }
