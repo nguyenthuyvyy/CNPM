@@ -48,7 +48,15 @@ jobs:
 
       - name: Build Payment Service
         working-directory: ./DoAnCNPM_Backend/payment_service
-        run: mvn clean install -DskipTests
+        env:
+          SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/foodfast_db
+          SPRING_DATASOURCE_USERNAME: postgres
+          SPRING_DATASOURCE_PASSWORD: 1
+        run: |
+          echo "Running Unit Tests..."
+          mvn test -Dtest=*UnitTest
+          echo "Running Integration Tests..."
+          mvn verify -Dtest=*IntegrationTest
 
       - name: Build User Service
         working-directory: ./DoAnCNPM_Backend/user_service
