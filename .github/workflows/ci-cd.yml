@@ -59,7 +59,7 @@ jobs:
         run: mvn clean install -DskipTests
 
       # --- 5. Run Unit + Integration Tests for Order Service ---
-      - name: Build Drone Service
+      - name: Build Order Service
         working-directory: ./DoAnCNPM_Backend/order_service
         env:
           SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/foodfast_db
