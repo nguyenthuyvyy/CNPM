@@ -33,11 +33,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-websocket</artifactId>
         </dependency>
-<dependency>
-    <groupId>com.h2database</groupId>
-    <artifactId>h2</artifactId>
-    <scope>test</scope>
-</dependency>
+
         <!-- Messaging (cho SimpMessagingTemplate và các API STOMP) -->
         <dependency>
             <groupId>org.springframework</groupId>
