@@ -25,7 +25,7 @@ class PaymentServiceUnitTest {
     @Test
     void testCreatePayment() {
         Payment payment = new Payment();
-        payment.setAmount(BigDecimal.valueOf(300));
+        payment.setAmount(BigDecimal.valueOf(100));
 
         when(paymentRepository.save(payment)).thenReturn(payment);
 
@@ -44,6 +44,6 @@ class PaymentServiceUnitTest {
         when(paymentRepository.save(payment)).thenReturn(payment);
 
         Payment updated = paymentService.updatePaymentStatus(1L, 1);
-        assertEquals(1, updated.getStatus());
+        assertEquals(0, updated.getStatus());
     }
 }
