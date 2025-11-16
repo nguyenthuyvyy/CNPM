@@ -36,6 +36,23 @@
     <artifactId>spring-boot-starter-data-jpa</artifactId>
 </dependency>
 
+<!-- Actuator để mở các endpoint giám sát -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+
+<!-- Prometheus registry cho Micrometer -->
+<dependency>
+    <groupId>io.micrometer</groupId>
+    <artifactId>micrometer-registry-prometheus</artifactId>
+</dependency>
+
+<dependency>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-starter-security</artifactId>
+ </dependency>
+
 <!-- PostgreSQL driver -->
 <dependency>
     <groupId>org.postgresql</groupId>
