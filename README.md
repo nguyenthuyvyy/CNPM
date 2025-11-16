@@ -57,7 +57,7 @@ Hệ thống được thiết kế theo mô hình **Microservices**, gồm các 
 | **Order Service** | [http://localhost:8082](http://localhost:8082) |
 | **Restaurant Service** | [http://localhost:8083](http://localhost:8083) |
 | **Payment Service** | [http://localhost:8084](http://localhost:8084) |
-| **Drone Service** | [http://localhost:8088](http://localhost:8088) |
+| **Drone Service** | [http://localhost:8086](http://localhost:8086) |
 | **Frontend (Web UI)** | [http://localhost:5173](http://localhost:5173) |
 | **Database (PostgreSQL)** | `jdbc:postgresql://localhost:5433/foodfast_db` |
 
