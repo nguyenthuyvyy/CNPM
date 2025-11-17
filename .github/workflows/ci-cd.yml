@@ -86,7 +86,7 @@ jobs:
           echo "Running Integration Tests..."
           mvn verify -Dtest=*IntegrationTest
 
-      # --- 6. Build & Push Docker Images (chỉ khi tests pass) ---
+      # --- 6. Build & Push Docker Images ---
       - name: Build & Push Docker images
         if: success()
         run: |
