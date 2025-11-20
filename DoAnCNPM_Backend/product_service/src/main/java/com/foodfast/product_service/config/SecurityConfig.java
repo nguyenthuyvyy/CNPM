@@ -13,12 +13,10 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/actuator/prometheus").permitAll()
-                .requestMatchers("/actuator/health").permitAll()
-                .anyRequest().authenticated()
+                .requestMatchers("/actuator/**").permitAll()
+                .anyRequest().permitAll()  // Allow all for now - since this is internal only
             )
-            .csrf(csrf -> csrf.disable())
-            .httpBasic(Customizer.withDefaults()); // ⭐ FIX
+            .csrf(csrf -> csrf.disable());
         
         return http.build();
     }

@@ -15,6 +15,19 @@ services:
     networks:
       - foodfast-net
 
+  mongodb:
+    image: mongo:7.0
+    container_name: mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - foodfast-net
+
   eureka-server:
     build: ./DoAnCNPM_Backend/eureka_server
     container_name: eureka-server
@@ -60,7 +73,7 @@ services:
     build: ./DoAnCNPM_Backend/product_service
     container_name: product-service
     ports:
-      - "8080:8080"
+      - "8088:8088"
     environment:
       - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/foodfast_db
       - SPRING_DATASOURCE_USERNAME=postgres
@@ -128,6 +141,24 @@ services:
     networks:
       - foodfast-net
 
+  restaurant-service:
+    build: ./DoAnCNPM_Backend/restaurant-service
+    container_name: restaurant-service
+    ports:
+      - "8083:8083"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres-db:5432/foodfast_db
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=1
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_PROPERTIES_HIBERNATE_DIALECT=org.hibernate.dialect.PostgreSQLDialect
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eureka-server:8761/eureka/
+    depends_on:
+      - postgres-db
+      - eureka-server
+    networks:
+      - foodfast-net
+
   # ===== Thêm Node Exporter =====
   node-exporter:
     image: prom/node-exporter:latest
@@ -161,8 +192,11 @@ services:
       - "3001:3000"
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=1admin1
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel
     volumes:
       - grafana-data:/var/lib/grafana
+      - ./monitoring/grafana/provisioning/datasources:/etc/grafana/provisioning/datasources
+      - ./monitoring/grafana/provisioning/dashboards:/etc/grafana/provisioning/dashboards
     networks:
       - foodfast-net
     depends_on:
@@ -170,6 +204,7 @@ services:
 
 volumes:
   pgdata:
+  mongodb_data:
   grafana-data:
 
 networks:
