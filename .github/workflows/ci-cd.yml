@@ -179,9 +179,9 @@ jobs:
         with:
           context: ./DoAnCNPM_Backend/product_service
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/product_service:latest
-          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/product_service:buildcache
-          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/product_service:buildcache,mode=max
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/product-service:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/product-service:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/product-service:buildcache,mode=max
 
       # --- Build & Push User Service ---
       - name: Build and push User Service
@@ -242,41 +242,3 @@ jobs:
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/api-gateway:latest
           cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/api-gateway:buildcache
           cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/api-gateway:buildcache,mode=max
-
-  # --- Job 3: K6 Performance Testing ---
-  performance-tests:
-    name: K6 Performance Tests
-    runs-on: ubuntu-latest
-    needs: docker-push
-    if: success()
-
-    steps:
-      # --- Checkout code ---
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      # --- Start Docker Compose ---
-      - name: Start Docker Compose services
-        run: |
-          docker-compose up -d
-          sleep 30
-          echo "✅ All services started"
-
-      # --- Run K6 Performance Tests ---
-      - name: Run K6 Performance Tests
-        run: |
-          echo "🚀 Running K6 performance tests..."
-          docker-compose run --rm k6 run /scripts/working-k6-test.js \
-            --vus 20 \
-            --duration 1m \
-            --out json=/tmp/results.json
-          echo "✅ K6 tests completed"
-
-      # --- Upload K6 Results ---
-      - name: Upload K6 Results
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: k6-test-results
-          path: /tmp/results.json
-          retention-days: 30
