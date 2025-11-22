@@ -37,7 +37,7 @@ scrape_configs:
   - job_name: "drone-service"
     metrics_path: "/actuator/prometheus"
     static_configs:
-      - targets: ["drone-service:8086"]
+      - targets: ["drone-service:8089"]
 
   - job_name: "restaurant-service"
     metrics_path: "/actuator/prometheus"
@@ -53,3 +53,10 @@ scrape_configs:
   - job_name: "node-exporter"
     static_configs:
       - targets: ["node-exporter:9100"]
+
+  # ===== K6 Performance Testing =====
+  - job_name: "k6"
+    static_configs:
+      - targets: ["k6-exporter:6565"]
+    scrape_interval: 5s
+    scrape_timeout: 3s

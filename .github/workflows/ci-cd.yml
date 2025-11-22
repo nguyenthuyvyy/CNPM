@@ -1,15 +1,20 @@
-name: CI/CD
+name: CI/CD Pipeline - CNPM Fast Food Delivery
 
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  build:
+  # --- Job 1: Test Backend Services ---
+  test-backend:
+    name: Backend Services - Test & Build
     runs-on: ubuntu-latest
 
-    # --- 1. Services: Postgres container cho Order Service tests ---
+    # --- Services: PostgreSQL for integration tests ---
     services:
       postgres:
         image: postgres:16
@@ -26,73 +31,252 @@ jobs:
           --health-retries 5
 
     steps:
-      # --- 2. Checkout code ---
+      # --- Checkout code ---
       - name: Checkout code
         uses: actions/checkout@v3
 
-      # --- 3. Setup JDK 21 ---
+      # --- Setup JDK 21 ---
       - name: Set up JDK 21
         uses: actions/setup-java@v3
         with:
           java-version: '21'
           distribution: 'temurin'
+          cache: maven
 
-      # --- 4. Build Backend Microservices  ---
-      - name: Build Eureka Server
+      # --- Cache Maven dependencies ---
+      - name: Cache Maven packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
+      # --- Build & Test Eureka Server ---
+      - name: Test Eureka Server
         working-directory: ./DoAnCNPM_Backend/eureka_server
-        run: mvn clean install -DskipTests
+        run: |
+          echo "🔍 Testing Eureka Server..."
+          mvn clean test
+          echo "✅ Eureka Server tests passed"
 
-      - name: Build Product Service
+      # --- Build & Test Product Service ---
+      - name: Test Product Service
         working-directory: ./DoAnCNPM_Backend/product_service
-        run: mvn clean install -DskipTests
+        run: |
+          echo "🔍 Testing Product Service..."
+          mvn clean test
+          echo "✅ Product Service tests passed"
 
-      - name: Build Payment Service
+      # --- Build & Test User Service ---
+      - name: Test User Service
+        working-directory: ./DoAnCNPM_Backend/user_service
+        run: |
+          echo "🔍 Testing User Service..."
+          mvn clean test
+          echo "✅ User Service tests passed"
+
+      # --- Build & Test Restaurant Service ---
+      - name: Test Restaurant Service
+        working-directory: ./DoAnCNPM_Backend/restaurant-service
+        run: |
+          echo "🔍 Testing Restaurant Service..."
+          mvn clean test
+          echo "✅ Restaurant Service tests passed"
+
+      # --- Build & Test Payment Service ---
+      - name: Test Payment Service
         working-directory: ./DoAnCNPM_Backend/payment_service
         env:
           SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/foodfast_db
           SPRING_DATASOURCE_USERNAME: postgres
           SPRING_DATASOURCE_PASSWORD: 1
         run: |
-          echo "Running Unit Tests..."
-          mvn test -Dtest=*UnitTest
-          echo "Running Integration Tests..."
-          mvn verify -Dtest=*IntegrationTest
+          echo "🔍 Testing Payment Service..."
+          mvn clean test
+          echo "✅ Payment Service tests passed"
 
-      - name: Build User Service
-        working-directory: ./DoAnCNPM_Backend/user_service
-        run: mvn clean install -DskipTests
-
-      - name: Build Drone Service
-        working-directory: ./DoAnCNPM_Backend/drone_service
-        env:
-          SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/foodfast_db
-          SPRING_DATASOURCE_USERNAME: postgres
-          SPRING_DATASOURCE_PASSWORD: 1
-        run: |
-          echo "Running Unit Tests..."
-          mvn test -Dtest=*UnitTest
-          echo "Running Integration Tests..."
-          mvn verify -Dtest=*IntegrationTest
-
-      - name: Build Order Service
+      # --- Build & Test Order Service ---
+      - name: Test Order Service
         working-directory: ./DoAnCNPM_Backend/order_service
         env:
           SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/foodfast_db
           SPRING_DATASOURCE_USERNAME: postgres
           SPRING_DATASOURCE_PASSWORD: 1
         run: |
-          echo "Running Unit Tests..."
-          mvn test -Dtest=*UnitTest
-          echo "Running Integration Tests..."
-          mvn verify -Dtest=*IntegrationTest
+          echo "🔍 Testing Order Service..."
+          mvn clean test
+          echo "✅ Order Service tests passed"
 
-      # --- 6. Build & Push Docker Images ---
-      - name: Build & Push Docker images
-        if: success()
+      # --- Build & Test Drone Service ---
+      - name: Test Drone Service
+        working-directory: ./DoAnCNPM_Backend/drone_service
+        env:
+          SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/foodfast_db
+          SPRING_DATASOURCE_USERNAME: postgres
+          SPRING_DATASOURCE_PASSWORD: 1
         run: |
-          echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+          echo "🔍 Testing Drone Service..."
+          mvn clean test
+          echo "✅ Drone Service tests passed"
 
-          for service in eureka_server product_service order_service payment_service user_service drone_service; do
-            docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/$service ./DoAnCNPM_Backend/$service
-            docker push ${{ secrets.DOCKERHUB_USERNAME }}/$service
+      # --- Build & Test API Gateway ---
+      - name: Test API Gateway
+        working-directory: ./DoAnCNPM_Backend/api-gateway
+        run: |
+          echo "🔍 Testing API Gateway..."
+          mvn clean test
+          echo "✅ API Gateway tests passed"
+
+      # --- Build all services for Docker ---
+      - name: Build all Backend Services (JAR)
+        run: |
+          echo "📦 Building all services..."
+          for service in eureka_server product_service user_service restaurant-service payment_service order_service drone_service api-gateway; do
+            echo "Building $service..."
+            cd ./DoAnCNPM_Backend/$service
+            mvn clean package -DskipTests
+            cd ../../..
           done
+          echo "✅ All services built successfully"
+
+  # --- Job 2: Build & Push Docker Images ---
+  docker-push:
+    name: Build & Push Docker Images
+    runs-on: ubuntu-latest
+    needs: test-backend
+    if: success()
+
+    steps:
+      # --- Checkout code ---
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # --- Setup Docker Buildx ---
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+
+      # --- Login to DockerHub ---
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # --- Build & Push Eureka Server ---
+      - name: Build and push Eureka Server
+        uses: docker/build-push-action@v4
+        with:
+          context: ./DoAnCNPM_Backend/eureka_server
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/eureka-server:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/eureka-server:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/eureka-server:buildcache,mode=max
+
+      # --- Build & Push Product Service ---
+      - name: Build and push Product Service
+        uses: docker/build-push-action@v4
+        with:
+          context: ./DoAnCNPM_Backend/product_service
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/product-service:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/product-service:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/product-service:buildcache,mode=max
+
+      # --- Build & Push User Service ---
+      - name: Build and push User Service
+        uses: docker/build-push-action@v4
+        with:
+          context: ./DoAnCNPM_Backend/user_service
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/user-service:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/user-service:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/user-service:buildcache,mode=max
+
+      # --- Build & Push Restaurant Service ---
+      - name: Build and push Restaurant Service
+        uses: docker/build-push-action@v4
+        with:
+          context: ./DoAnCNPM_Backend/restaurant-service
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/restaurant-service:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/restaurant-service:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/restaurant-service:buildcache,mode=max
+
+      # --- Build & Push Payment Service ---
+      - name: Build and push Payment Service
+        uses: docker/build-push-action@v4
+        with:
+          context: ./DoAnCNPM_Backend/payment_service
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/payment-service:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/payment-service:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/payment-service:buildcache,mode=max
+
+      # --- Build & Push Order Service ---
+      - name: Build and push Order Service
+        uses: docker/build-push-action@v4
+        with:
+          context: ./DoAnCNPM_Backend/order_service
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/order-service:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/order-service:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/order-service:buildcache,mode=max
+
+      # --- Build & Push Drone Service ---
+      - name: Build and push Drone Service
+        uses: docker/build-push-action@v4
+        with:
+          context: ./DoAnCNPM_Backend/drone_service
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/drone-service:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/drone-service:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/drone-service:buildcache,mode=max
+
+      # --- Build & Push API Gateway ---
+      - name: Build and push API Gateway
+        uses: docker/build-push-action@v4
+        with:
+          context: ./DoAnCNPM_Backend/api-gateway
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/api-gateway:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/api-gateway:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/api-gateway:buildcache,mode=max
+
+  # --- Job 3: K6 Performance Testing ---
+  performance-tests:
+    name: K6 Performance Tests
+    runs-on: ubuntu-latest
+    needs: docker-push
+    if: success()
+
+    steps:
+      # --- Checkout code ---
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # --- Start Docker Compose ---
+      - name: Start Docker Compose services
+        run: |
+          docker-compose up -d
+          sleep 30
+          echo "✅ All services started"
+
+      # --- Run K6 Performance Tests ---
+      - name: Run K6 Performance Tests
+        run: |
+          echo "🚀 Running K6 performance tests..."
+          docker-compose run --rm k6 run /scripts/working-k6-test.js \
+            --vus 20 \
+            --duration 1m \
+            --out json=/tmp/results.json
+          echo "✅ K6 tests completed"
+
+      # --- Upload K6 Results ---
+      - name: Upload K6 Results
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: k6-test-results
+          path: /tmp/results.json
+          retention-days: 30
