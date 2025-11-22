@@ -138,6 +138,14 @@ jobs:
           done
           echo "✅ All services built successfully"
 
+      # --- Upload build artifacts ---
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: DoAnCNPM_Backend/*/target/*.jar
+          retention-days: 1
+
   # --- Job 2: Build & Push Docker Images ---
   docker-push:
     name: Build & Push Docker Images
@@ -149,6 +157,13 @@ jobs:
       # --- Checkout code ---
       - name: Checkout code
         uses: actions/checkout@v3
+
+      # --- Download build artifacts ---
+      - name: Download build artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: build-artifacts
+          path: DoAnCNPM_Backend
 
       # --- Setup Docker Buildx ---
       - name: Set up Docker Buildx
