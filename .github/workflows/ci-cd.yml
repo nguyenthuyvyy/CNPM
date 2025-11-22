@@ -134,9 +134,7 @@ jobs:
           echo "📦 Building all services..."
           for service in eureka_server product_service user_service restaurant-service payment_service order_service drone_service api-gateway; do
             echo "Building $service..."
-            cd ./DoAnCNPM_Backend/$service
-            mvn clean package -DskipTests
-            cd ../../..
+            (cd ./DoAnCNPM_Backend/$service && mvn clean package -DskipTests)
           done
           echo "✅ All services built successfully"
 
