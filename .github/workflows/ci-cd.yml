@@ -179,9 +179,9 @@ jobs:
         with:
           context: ./DoAnCNPM_Backend/product_service
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/product-service:latest
-          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/product-service:buildcache
-          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/product-service:buildcache,mode=max
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/product_service:latest
+          cache-from: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/product_service:buildcache
+          cache-to: type=registry,ref=${{ secrets.DOCKERHUB_USERNAME }}/product_service:buildcache,mode=max
 
       # --- Build & Push User Service ---
       - name: Build and push User Service
